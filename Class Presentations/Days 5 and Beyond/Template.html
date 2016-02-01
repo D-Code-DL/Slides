@@ -51,17 +51,33 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<h2>Standup</h2>
-					<ul>
-						<li>List of goals/objectives/topics</li>
-						<li>Topic</li>
-						<li>Topic</li>
-						<li>Topic</li>
+					<h2>goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">List of goals/objectives/topics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Topic</label>
+						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>try{whatDoYouRemember();}</h2>
+					<h2>
+					try {
+						whatDoYouRemember();
+					}
+					</h2>
 				</section>
 
 				<section>
@@ -407,6 +423,8 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
 
 		</script>
 
