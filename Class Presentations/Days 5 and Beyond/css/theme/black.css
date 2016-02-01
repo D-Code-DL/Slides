@@ -17,7 +17,7 @@ body {
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 38px;
-  font-weight: normal;
+  font-weight: 200;
   color: #fff; }
 
 ::selection {
@@ -42,7 +42,7 @@ body {
   margin: 0 0 20px 0;
   color: #fff;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
