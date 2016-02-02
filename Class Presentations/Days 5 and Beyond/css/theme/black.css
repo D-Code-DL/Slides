@@ -17,7 +17,7 @@ body {
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 38px;
-  font-weight: normal;
+  font-weight: 200;
   color: #fff; }
 
 ::selection {
@@ -42,7 +42,7 @@ body {
   margin: 0 0 20px 0;
   color: #fff;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -284,3 +284,46 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+.reveal ul.checklist {
+  list-style-type: none;
+  margin: 0; padding: 0;
+}
+
+.reveal ul.checklist li{
+  margin-bottom: .25em;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox] + label{
+  display: inline-block;
+  padding-left: 40px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  line-height: 32px;
+  cursor: pointer;
+
+}
+
+input[type=checkbox] + label:before {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-top: 3px;
+  background-color: transparent;
+  content: 'x';
+  margin-left: -40px;
+  float: left;
+  color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+input[type=checkbox]:checked + label:before{
+  background-color: #fff;
+}
+input[type=checkbox]:checked + label{
+text-decoration:line-through;
+}

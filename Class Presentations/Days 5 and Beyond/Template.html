@@ -51,21 +51,49 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<h2>Standup</h2>
-					<ul>
-						<li>List of goals/objectives/topics</li>
-						<li>Topic</li>
-						<li>Topic</li>
-						<li>Topic</li>
+					<h2>goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">List of goals/objectives/topics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Topic</label>
+						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>try{whatDoYouRemember();}</h2>
+					<h2>
+					try {
+						whatDoYouRemember();
+					}
+					</h2>
 				</section>
 
-				<section>
-					<h2>Topic</h2>
+				<section data-markdown>
+					## `&lt;example /&gt;`
+
+					lots of info about said example. Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+					* Including
+					* A bulleted
+					* list of things
+					* to think about
+
+					```javascript
+					var Markdown = 'The easiest way to get code samples into your
+					slide deck';
+					```
 				</section>
 
 				<section>
@@ -73,21 +101,11 @@
 					<ul>
 						<li>Use for live coding slides</li>
 					</ul>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
+					<div data-markdown>
+						```javascript
+						//It doesn't all have to be MD 
 						```
-						<section data-markdown>
-							## Markdown support
-
-							Write content using inline or external Markdown.
-							Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
+					</div>
 				</section>
 
 				<section>
@@ -407,6 +425,8 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
 
 		</script>
 
