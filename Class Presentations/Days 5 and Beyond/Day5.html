@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Day 5 – The HTML Presentation Framework</title>
+		<title>Day 5</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -41,50 +41,585 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Day 5 (03/0_/2016)</h1>
+					<h3>D-Code</h3>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1"/>
+							<label for="goal1">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal1">Guidelines for website project</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Split up into groups and begin</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Continue development</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					try {
+						whatDoYouRemember();
+					}
+					</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is HTML?</h2>
+					</section>
+					<section>
+						<p>(HyperText Markup Language; markup language used to create websites)</p>
+					</section>
+					<section>
+						<h2>What is a block element?</h2>
+					</section>
+					<section>
+						<p>(element that starts on a new line; examples include headers, p, lists and list items)</p>
+					</section>
+					<section>
+						<h2>What is an inline element?</h2>
+					</section>
+					<section>
+						<p>(element that continues on the same line; examples are spans, images, and semantic markup like em or b)</p>
+					</section>
+					<section>
+						<h2>What is a div used for?</h2>
+					</section>
+					<section>
+						<p>(grouping block elements/a block of elements together in their own block element)</p>
+					</section>
+					<section>
+						<h2>What is a span used for?</h2>
+					</section>
+					<section>
+						<p>(grouping inline elements together, often for styling)</p>
+					</section>
+					<section>
+						<h2>What does CSS stand for? What is it used for?</h2>
+					</section>
+					<section>
+						<p>(cascading style sheets, changes presentation of a webpage)</p>
+					</section>
+					<section data-markdown>
+						<h2>What is this an example of?</h2>
+						```css
+						.file {
+							background-color="#000000";
+						}
+						```
+					</section>
+					<section>
+						<p>(a CSS rule)</p>
+					</section>
+					<section>
+						<h2>What are the two parts of a CSS rule?</h2>
+					</section>
+					<section>
+						<p>(selector and declaration)</p>
+					</section>
+					<section>
+						<h2>What are the two parts of a declaration?</h2>
+					</section>
+					<section>
+						<p>(property and value)</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal1">Guidelines for website project</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Split up into groups and begin</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Continue development</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					Guidelines for Website Project
+					</h2>
+				</section>
+
+				<section data-markdown>
+					## Goal
+
+					* Synthesize your knowledge from the past few days to make a (static) website.
+				</section>
+
+				<section data-markdown>
+					## Details
+
+					* You'll have today and the next two class periods to work on it.
+					* Presentations will be at the end of class a week from now.
+					* You'll work in groups of 3.
+					* We will give you a rubric so you know how you can challenge yourself...
+				</section>
+
+				<section data-markdown>
+					## Rubric
+
+					* Push yourself to move farther and farther to the right as you work on this!
+
+				</section>
+
+				<section>
+				<section>
+					<h2>Rubric</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Categories</th>
+								<th>OK</th>
+								<th>Better</th>
+								<th>Even Better</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Background</td>
+								<td>blank</td>
+								<td>solid color</td>
+								<td>image</td>
+							</tr>
+							<tr>
+								<td>Font</td>
+								<td>default font</td>
+								<td>non-default fonts included in system</td>
+								<td>imports a font from online (e.g. Google)</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Rubric</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Categories</th>
+								<th>OK</th>
+								<th>Better</th>
+								<th>Even Better</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Text Color</td>
+								<td>default</td>
+								<td>different colors for headers</td>
+								<td>emphasize text, change its color</td>
+							</tr>
+							<tr>
+								<td>Images</td>
+								<td>no images</td>
+								<td>at least one image</td>
+								<td>image button</td>
+							</tr>
+							<tr>
+								<td>Images Sizes</td>
+								<td>default image size</td>
+								<td>size specified in HTML</td>
+								<td>size specified in CSS</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Rubric</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Categories</th>
+								<th>OK</th>
+								<th>Better</th>
+								<th>Even Better</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Headers</td>
+								<td>no headers</td>
+								<td>one or more header sizes used</td>
+								<td>increase size of subheadings</td>
+							</tr>
+							<tr>
+								<td>CSS</td>
+								<td>no CSS used in project</td>
+								<td>CSS modifies tags in HTML code</td>
+								<td>CSS modifies tags and [classes and/or ids] in HTML code</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked/>
+						<label for="goal1">try{whatDoYouRemember();}</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal1">Guidelines for website project</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3"/>
+						<label for="goal2">Split up into groups and begin</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4"/>
+						<label for="goal3">Continue development</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>
+				Split up into groups...
+				</h2>
+			</section>
+
+			<section>
+				<h2>
+				...and begin!
+				</h2>
+			</section>
+
+			<section data-background="../presentation-images/template/loading.jpg">
+			</section>
+
+			<section>
+				<h2>
+				Continue development
+				</h2>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				finally {
+					talkAboutWhatWeveLearned();
+				}
+				```
+			</section>
+
+			<section>
+				<h2>Now We're Done</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked/>
+						<label for="goal1">try{whatDoYouRemember();}</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal1">Guidelines for website project</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal2">Split up into groups and begin</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" checked/>
+						<label for="goal3">Continue development</label>
+					</li>
+				</ul>
+
+				<p text-align="right">At least...by our definition of done.</p>
+			</section>
+
+<section></section>
+<section></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+					</p>
+					<a href="#" class="navigate-down">
+						<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+					</a>
+				</section>
+				<section>
+					<h2>Image Backgrounds</h2>
+					<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+				</section>
+				<section>
+					<h2>Tiled Backgrounds</h2>
+					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+				</section>
+				<section>
+					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+						<h2>Video Backgrounds</h2>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>... and GIFs!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">List of goals/objectives/topics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Topic</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1"/>
+							<label for="goal1">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal1">Guidelines for website project</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Split up into groups and begin</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Continue development</label>
+						</li>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					```javascript
+					try {
+						whatDoYouRemember();
+					}
+					```
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>Topic</h2>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<h2>Code Highlight</h2>
+					<section data-markdown>
+						```javascript
+						&lt;p&gt;
+							&lt;span class="file"&gt;Some text&lt;/span&gt;
+						&lt;/p&gt;
+						```
+						```css
+						.file {
+							background-color="#000000";
+						}
+						```
+					</section>
+				</section>
+
+				<section data-markdown>
+					## Topic
+
+					* Bullet points
+				</section>
+
+				<section data-markdown>
+					## `try{assignment();}`
+
+					* Assignment details
+					* Assignment details
+				</section>
+
+				<section data-markdown>
+					<section data-markdown>
+					## `catch{assignment();}`
+
+					* Assignment details
+
+
+
+					</section>
+					<br />
+					### Notes:
+					* Note 1
+					* Note 2
+					* Note 3 (Samsung Galaxy?)
+				</section>
+
+				<section data-markdown>
+					## `while(reminders);`
+
+					Reminder notes
+				</section>
+
+				<section>
+					<h2>Huddle</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">List of goals/objectives/topics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Topic</label>
+						</li>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					## `break;`
+
+					Write a question here
+				</section>
+
+				<section data-markdown>
+					## `continue;`
+
+					Write the answer or summarization
+				</section>
+
+				<section data-markdown>
+					## `try{groupWork();}`
+
+					groupOfFive[0] =
+
+					groupOfFive[1] =
+
+					groupOfFive[2] =
+
+					1. What is your first question?
+					2. What is your second question?
+
+					Any other notes
+
+				</section>
+				<section data-markdown>
+					```javascript
+					finally {
+						talkAboutWhatWeveLearned();
+					}
+					```
+				</section>
+
+				<section data-background="../presentation-images/template/loading.jpg">
+				</section>
+
+				<section>
+					<h2>Now We're Done</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">List of goals/objectives/topics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal2">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal3">Topic</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4" checked/>
+							<label for="goal4">Topic</label>
+						</li>
+					</ul>
+
+					<p text-align="right">At least...by our definition of done.</p>
+				</section>
+				<section data-markdown>
+					## `&lt;example /&gt;`
+
+					lots of info about said example. Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+					* Including
+					* A bulleted
+					* list of things
+					* to think about
+
+					```javascript
+					var Markdown = 'The easiest way to get code samples into your
+					slide deck';
+					```
+				</section>
+
+				<section>
+					<h2>Code Highlight</h2>
+					<ul>
+						<li>Use for live coding slides</li>
+					</ul>
+					<div data-markdown>
+						```javascript
+						//It doesn't all have to be MD
+						```
+					</div>
 				</section>
 
 				<section>
@@ -404,6 +939,8 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
 
 		</script>
 
