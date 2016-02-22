@@ -369,104 +369,387 @@
 
 				<section>
 					<h2>Elements</h2>
+					<ul>
+						<li>Individual component of HTML document web page </li>
+						<li>We see them in the document-object model when we look at webpages using developer tools</li>
+						<li>Elements tell browser something about the information they contain</li>
+						<li>Includes tags and information between them</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>Tags</h2>
+					<ul>
+						<li>Marks the beginning and end (usually) of each element.</li>
+						<li>Keywords surrounded by angle brackets.</li>
+						<li>Describes the type of element (&lt;head>, &lt;title>, &lt;body> or &lt;footer>)</li>
+						<li>Always open < > (ex: &lt;head>)</li>
+						<li>Sometimes closes </ > (ex: &lt;/head>)</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>&lt;!DOCTYPE html></h2>
+					<ul>
+						<li>HTML tag === false;</li>
+						<li>Declares which version of HTML your page is using</li>
+						<li>This is declaring the latest version of HTML (which currently is HTML5)</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>while(writingCode)</h2>
+					<h3>SAVE YOUR PROGRESS!!</h3>
+					<p>File > Save <i>or</i> Ctrl + S</p>
 				</section>
 
 				<section>
 					<h2>&lt;head> &lt;/head></h2>
+					<ul>
+						<li>Contains information about the page</li>
+						<li>Contains the page’s &lt;title></li>
+						<li>Contains &lt;link> to other external files</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;head>
+	&lt;title>My First Web Page&lt;/title>
+&lt;/head>
+
+					</code></pre>
+						<aside class="notes">
+							Notice how title’s opening and closing elements are both inside
+							of the head element? That’s called nesting. Some elements nest
+							inside of others. First to open will be last to close, and v.v.
+						</aside>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>&lt;body> &lt;/body></h2>
+					<ul>
+						<li>Contains the HTML document including text, buttons, tables, etc.</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;body&gt;
+&lt;/body&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>&lt;h1> &lt;/h1> - &lt;h6> &lt;/h6></h2>
+					<ul>
+						<li>Defines Headings</li>
+						<li>Range in size from &lt;h1> which is the largest to &lt;h6> which is the smallest</li>
+						<li>Used to organize information on the page from most important to least important</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1>Hello World!!&lt;/h1>
+&lt;h2>by: (your name here)&lt;/h2>
+
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>&lt;p> &lt;/p></h2>
+					<ul>
+						<li>Defines paragraphs</li>
+						<li>Small text, usually the bulk of the page content</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;"> &lt;p>You just wrote a webpage using HTML!
+		Next we are going to look at these elements&lt;/p>
+
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Attributes</h2>
+					<ul>
+						<li>Key/Value Pairs</li>
+						<li>Keys define the attribute </li>
+						<li>Values set the value of the attribute</li>
+						<li>Provides additional info about/Modifies HTML elements</li>
+						<li>Always specified in the start tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1 align=“center”>
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>break;</h2>
+					<p>Can you change the direction of text using HTML attributes?</p>
 				</section>
 
 				<section>
 					<h2>continue;</h2>
+					<p>Yes you can! Using the dir attribute you can change the direction
+						of the text in an element. There are about 118 different HTML tags
+						though not all are supported by HTML5. And these tags can be
+						modified by many different attributes. </p>
 				</section>
 
 				<section>
 					<h2>&lt;ol> &lt;/ol></h2>
+					<ul>
+						<li>Defines an ordered list</li>
+						<li>Increments numerically as items are added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ol>
+	&lt;li>Create new HTML file&lt;/li>
+	&lt;li>Add HTML code&lt;/li>
+	&lt;li>Save file&lt;/li>
+	&lt;li>Open file in browser&lt;/li>
+&lt;/ol>
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>&lt;ul> &lt;/ul></h2>
+					<ul>
+						<li>Defines an unordered list</li>
+						<li>Bullet-points items added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ul>
+	&lt;li>Does page load?&lt;/li>
+	&lt;li>Does page display properly?&lt;/li>
+	&lt;li>Are you smiling?&lt;/li>
+&lt;/ul>
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>&lt;a> &lt;/a></h2>
+					<ul>
+						<li>Defines a hyperlink</li>
+						<li>Needs href attribute to define link destination</li>
+						<li>By default,
+						<ul>
+							<li>Unvisited links are in blue underlined text</li>
+							<li>Visited links are purple underlined text</li>
+							<li>Active links are red underlined text</li>
+						</ul></li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+					</code></pre>
+					<aside class="notes">
+						You'll have to change the text between the p tags here.
+					</aside>
 				</section>
 
 				<section>
 					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML at
+			&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+		&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Ship It!</h2>
+					<p>In Chrome:</p>
+					<ul>
+						<li>Click “File”,</li>
+						<li>Select “Open File”</li>
+						<li>Open “HelloWorldHTML.html</li>
+					</ul>
+					<aside class="notes">
+					Discussion:
+					If there are any errors on their pages:
+					-What could we have done while developing to catch them sooner?
+					*Importance of testing and refactoring during the development cycle.
+					-Remember that time you waited until the last minute to write that paper??
+					</aside>
 				</section>
 
 				<section>
 					<h2>Varieties of Fish</h2>
+					<p>Resources for HTML</p>
+					<ul><li>MDN (<a href="developer.mozilla.org/en-US/docs/Web/HTML">developer.mozilla.org/en-US/docs/Web/HTML</a>)</li></ul>
+					<p>Resources for HTML tags</p>
+					<ul><li>W3 Schools (<a href="www.w3schools.com/tags/">www.w3schools.com/tags/</a>)</li>
+					<li>HTML Dog (<a href="www.htmldog.com/references/html/tags/">www.htmldog.com/references/html/tags/</a>)</li></ul>
 				</section>
 
+				<section>
+				<section data-markdown>
+					```javascript
+					finally {
+						talkAboutWhatWeveLearned();
+					}
+					```
+				</section>
+					<aside class="notes">
+						Discuss the topics covered:
+						Tools used to develop:
+						What HTML means:
+						Tags:
+						HelloWorld:
+						-How did it feel to develop a web page?
+						Team Assignment:
+						-How did it feel to work in a group?
+						-Why is team work is important in development?
+						Overall Day:
+						-What went well?
+						-What could have gone better?
+						-What will do we to improve?
+					</aside>
+				</section>
 
 				<section>
 					<h2>Now We're Done</h2>
