@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Day 3</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Day 3 (02/25/2016)</h1>
+					<h3>D-Code</h3>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0"/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1"/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					try {
+						whatDoYouRemember();
+					}
+					</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>What does HTML stand for?</h2>
+					</section>
+					<section>
+						<p>HyperText Markup Language</p>
+					</section>
+					<section>
+						<h2>What is HTML used for?</h2>
+					</section>
+					<section>
+						<p>Used to create the content that goes in a website; defines the structure of a website</p>
+					</section>
+					<section>
+						<h2>What is an element?</h2>
+					</section>
+					<section>
+						<p>An element is a part of the HTML webpage</p>
+					</section>
+					<section>
+						<h2>What is a tag?</h2>
+					</section>
+					<section>
+						<p>A tag is a marker that describes the element</p>
+					</section>
+					<section>
+						<h2>What are some examples of HTML tags?</h2>
+					</section>
+					<section>
+						<p>head, body, title, ... (that's what we've learned so far)</p>
+					</section>
+					<section>
+						<h2>How do you write an HTML opening tag? Closing tag? (Someone can come up and write it)</h2>
+					</section>
+					<section>
+						<p>&lt;example&gt; &lt;/example&gt;</p>
+					</section>
+					<section>
+						<h2>How do you open an HTML file to edit the code?</h2>
+					</section>
+					<section>
+						<p>1 - through the text editor: select File > Open > (the file) <br />
+						2- Right click on the file > Open With... (the text editor you use)</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1"/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>
+					Build an HTML document (computer) (cont'd)
+					</h2>
+				</section>
+
+				<section>
+					<h2>&lt;body> &lt;/body></h2>
+					<ul>
+						<li>Contains the HTML document including text, buttons, tables, etc.</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;body&gt;
+&lt;/body&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;h1> &lt;/h1> - &lt;h6> &lt;/h6></h2>
+					<ul>
+						<li>Defines Headings</li>
+						<li>Range in size from &lt;h1> which is the largest to &lt;h6> which is the smallest</li>
+						<li>Used to organize information on the page from most important to least important</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1>Hello World!!&lt;/h1>
+&lt;h2>by: (your name here)&lt;/h2>
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;p> &lt;/p></h2>
+					<ul>
+						<li>Defines paragraphs</li>
+						<li>Small text, usually the bulk of the page content</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;"> &lt;p>You just wrote a webpage using HTML!
+		Next we are going to look at these elements&lt;/p>
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Attributes</h2>
+					<ul>
+						<li>Key/Value Pairs</li>
+						<li>Keys define the attribute </li>
+						<li>Values set the value of the attribute</li>
+						<li>Provides additional info about/Modifies HTML elements</li>
+						<li>Always specified in the start tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1 align=“center”>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>break;</h2>
+					<p>Can you change the direction of text using HTML attributes?</p>
+				</section>
+
+				<section>
+					<h2>continue;</h2>
+					<p dir="rtl"> Yes you can! Sort of (see the last line). Using the dir attribute you can change
+						where the punctuation appears, which is useful for languages that are
+						written from right-to-left, like Arabic. There are about 118
+						different HTML tags, though not all are supported by HTML5. And
+						these tags can be modified by many different attributes. </p>
+				</section>
+
+				<section>
+					<h2>&lt;ol> &lt;/ol></h2>
+					<ul>
+						<li>Defines an ordered list</li>
+						<li>Increments numerically as items are added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ol>
+	&lt;li>Create new HTML file&lt;/li>
+	&lt;li>Add HTML code&lt;/li>
+	&lt;li>Save file&lt;/li>
+	&lt;li>Open file in browser&lt;/li>
+&lt;/ol>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;ul> &lt;/ul></h2>
+					<ul>
+						<li>Defines an unordered list</li>
+						<li>Bullet-points items added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ul>
+	&lt;li>Does page load?&lt;/li>
+	&lt;li>Does page display properly?&lt;/li>
+	&lt;li>Are you smiling?&lt;/li>
+&lt;/ul>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;a> &lt;/a></h2>
+					<ul>
+						<li>Defines a hyperlink</li>
+						<li>Needs href attribute to define link destination</li>
+						<li>By default,
+						<ul>
+							<li>Unvisited links are in blue underlined text</li>
+							<li>Visited links are purple underlined text</li>
+							<li>Active links are red underlined text</li>
+						</ul></li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+					</code></pre>
+					<aside class="notes">
+						You'll have to change the text between the p tags here.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML at
+			&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+		&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Ship It!</h2>
+					<p>In Chrome:</p>
+					<ul>
+						<li>Click “File”,</li>
+						<li>Select “Open File”</li>
+						<li>Open “HelloWorldHTML.html</li>
+					</ul>
+					<aside class="notes">
+					Discussion:
+					If there are any errors on their pages:
+					-What could we have done while developing to catch them sooner?
+					*Importance of testing and refactoring during the development cycle.
+					-Remember that time you waited until the last minute to write that paper??
+					</aside>
+				</section>
+
+				<section>
+					<h2>Varieties of Fish</h2>
+					<p>Resources for HTML</p>
+					<ul><li>MDN (<a href="developer.mozilla.org/en-US/docs/Web/HTML">developer.mozilla.org/en-US/docs/Web/HTML</a>)</li></ul>
+					<p>Resources for HTML tags</p>
+					<ul><li>W3 Schools (<a href="www.w3schools.com/tags/">www.w3schools.com/tags/</a>)</li>
+					<li>HTML Dog (<a href="www.htmldog.com/references/html/tags/">www.htmldog.com/references/html/tags/</a>)</li></ul>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal2">HTML Semantic and Iterative Development</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>One Step at a Time</h2>
+				</section>
+
+				<section>
+					<h2>Iterative Development</h2>
+					<h3><i>Why?</i></h3>
+					<ul class="fragment"><li>Because waiting to find bugs until we are done writing all our code delays deployment</li></ul>
+					<h3 class="fragment"><i>How?</i></h3>
+					<p class="fragment">Get into the habit of iterating through three steps as you're developing:</p>
+					<ol>
+						<li class="fragment">Write some code</li>
+						<li class="fragment">Test your code</li>
+						<li class="fragment">Fix any bugs</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>while(writingCode)</h2>
+					<h3>SAVE YOUR PROGRESS!!</h3>
+					<p>File > Save <i>or</i> Ctrl + S</p>
+				</section>
+
+				<section>
+					<h2>Iterative Development</h2>
+					<p>There are other software development methodologies that development
+						 teams use but most have this short iterative process
+						(in some fashion) in common.</p>
+				</section>
+
+				<section>
+					<h2>Tomāto, Tomäto</h2>
+					<aside class="notes">
+						Have students open helloWorldHTML.html in Atom
+					</aside>
+				</section>
+
+				<section>
+					<h2>Semantic Tags</h2>
+					<ul>
+						<li>Elements with a meaning</li>
+						<li>Describes its meaning to the browser and developer</li>
+						<li>Useful for text-to-speech</li>
+						<li>Makes types, hierarchies and relationships clearer</li>
+						<li>HTML5 has new semantic tags that eliminate the need for previous semantic tags.</li>
+					</ul>
+					<aside class="notes">
+						Have students open helloWorldHTML.html in Atom
+					</aside>
+				</section>
+
+				<section>
+					<h2>HTML: Structural vs Semantic Markup</h2>
+					<img src="../presentation-images/day3/ducks-arguing.jpg" alt="Ducks arguing" class="fragment"/>
+				</section>
+
+				<section>
+					<h2>HTML: Structural vs Semantic Markup</h2>
+					<ul>
+					<li>To keep it simple: structural is about...structure
+						(appearance on page), while semantic is about meaning.</li>
+					<li>Semantic HTML is useful for search engines, because they
+						can tell what is important on a webpage.</li>
+						<li>It's especially important for vision-impared readers, who use
+						screen readers to read out the content of a site.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>HTML: Structural vs Semantic Markup</h2>
+					<p>We'll walk you through a few elements and describe their
+					semantic meaning (and similar structural meaning); then, we'll have you
+					research some elements on your own.</p>
+				</section>
+
+				<section>
+					<h2>&lt;em> &lt;/em></h2>
+					<ul>
+						<li>Emphasized text</li>
+						<li>This, by the way, is a phrase tag; it may change what you see the same way as other tags, but
+						it's designed for a specific purpose.</li>
+						<li>Renders on the browser as <i>italicized</i> text</li>
+						<li>Use CSS to add additional effects</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;em>
+Software development is a craft that one must work to develop
+&lt;/em>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;strong> &lt;/strong></h2>
+					<ul>
+						<li>Another phrase tag, shows that text is important</li>
+						<li>Renders on the browser as <b>bold</b> text</li>
+						<li>Use CSS to add additional effects</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;strong>
+Developers develop software that develops their skillsets
+&lt;/strong>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Go forth and research!</h2>
+					<p>Pair up and research one of the following elements:
+						<pre>blockquote</pre>
+						<pre>cite</pre>
+						<pre>q</pre>
+						<pre>abbr</pre>
+						<pre>dfn</pre>
+						<pre>del</pre>
+						<pre>ins</pre></p>
+					</section>
+
+				<section>
+						<h2>Resources and Questions</h2>
+					<p>Check out <a>Google</a> and/or <a>www.W3Schools.com</a>
+						to learn more about your element. <br /> Answer the following
+						questions:</p>
+					<ul>
+						<li>What does it mean?</li>
+						<li>How is it rendered in the browser? Is there another tag that looks similar?</li>
+						<li>Did anything change between HTML4.01 and HTML5?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>&lt;blockquote> &lt;/blockquote></h2>
+					<ul>
+						<li>Specifies section quoted</li>
+						<li>Usually renders on browsers as indented text</li>
+						<li>In HTML4.01, defines a long quote</li>
+						<li>In HTML5, defines a quote from another source</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;blockquote>
+With attributes like elegant, creative, long-termed, and seeing the
+forest and the trees, our results indicate that good software
+engineering requires engineers to make complex, experienced-driven,
+contextual considerations.
+&lt;/blockquote>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;cite> &lt;/cite></h2>
+					<ul>
+						<li>Citation (HTML4.01)</li>
+						<li>HTML5 defines this as the title of the quote/work.</li>
+						<li>Renders on the browser as <i>italicized</i> text</li>
+						<li>Can be added to the head tag of a blockqote, but it won't be visible
+						on the page.</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;cite>
+https://faculty.washington.edu/ajko/papers/Li2015GreatEngineers.pdf
+&lt;/cite>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;q> &lt;/q></h2>
+					<ul>
+						<li>Defines a short quote</li>
+						<li>Renders on the browser as quotation marks</li>
+						<li>Note: Internet Explorer does not render this</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;q>
+What makes a great software engineer?
+&lt;/q>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;abbr> &lt;/abbr></h2>
+					<ul>
+						<li>Defines an abbreviation</li>
+						<li>Renders on the browser as the abbreviation</li>
+						<li>Full title displays when you mouse over it</li>
+						<li>Needs a title attribute</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;abbr title="Developer Life">
+DL
+&lt;/abbr>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;dfn> &lt;/dfn></h2>
+					<ul>
+						<li>Defines a definition</li>
+						<li>Renders on browsers as <i>italicized</i> text</li>
+						<li>Parent tag of the &lt;dfn&gt; must also contain the definition inside it</li>
+						<li>Many ways to use this tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;p> &lt;dfn>Developer&lt;/dfn>
+an artist and craftsperson of software.&lt;/p>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;address> &lt;/address></h2>
+					<ul>
+						<li>Defines the contact information of the author/owner</li>
+						<li>Not for the description of a postal address</li>
+						<li>Renders on browsers as <i>italicized</i> block</li>
+						<li>Usually included in the &lt;footer&gt; tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;footer&gt;
+&lt;address&gt;Written By: (your name)
+Visit us at: the World Wide Web
+&lt;/address&gt;
+&lt;/footer></code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;del> &lt;/del></h2>
+					<ul>
+						<li>Defines deleted text</li>
+						<li>Renders on the browser as <del>strike through</del></li>
+						<li>Used with the &lt;ins&gt; tag (see next slide)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>&lt;ins> &lt;/ins></h2>
+					<ul>
+						<li>Defines inserted text</li>
+						<li>Renders on the browser as <u>underlined</u></li>
+						<li>Used with the &lt;del&gt; tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">
+&lt;p&gt;Coding can be &lt;del&gt;too hard&lt;/del&gt;
+&lt;ins&gt;a great challenge&lt;/ins&gt;&lt;/p&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;s> &lt;/s></h2>
+					<ul>
+						<li>Defines text that is no longer correct/accurate/relevant but
+						should not be deleted</li>
+						<li>Also renders on browsers as <s>strike through</s></li>
+						<li>This was redefined by HTML5 (used to be defined as strike-through text)</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;p&gt;&lt;s&gt;Development takes a lot of math skills&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;Development takes creativity and logic&lt;/p&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Picture This</h2>
+				</section>
+
+				<section>
+					<h2>Images</h2>
+					<ul>
+						<li>Save images in the size you want</li>
+						<li>Can define a height and width in the &lt;img&gt; tag</li>
+						<li>Store images in a folder in the project</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>&lt;img /&gt;</h2>
+					<ul>
+						<li>Defines an image</li>
+						<li>&lt;image&gt; is an empty element; it does not have a closing tag</li>
+						<li>Requires attributes src and alt</li>
+						<li>Images are not inserted, but linked</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">
+&lt;img src="images/image.gif" alt="an image" /&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>src=""</h2>
+					<ul>
+						<li>Source of the image file</li>
+						<li>Requires a URL value:
+							<ul>
+								<li>Absolute URL (e.g. <a>http://www.web.com/image.gif</a>)</li>
+								<li>Relative URL (e.g. images/image.gif)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>alt=""</h2>
+					<ul>
+						<li>Defines alternate text for an image</li>
+						<li>Understandable by search engines and screen reader software</li>
+						<li>Images with no meaning should use an empty alt text</li>
+						<li>Title attribute can be used for more description, will be
+							rendered as a tool tip (when you mouse over it, you can see it)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>try{addImage();}</h2>
+					<ol>
+						<li>Create a file folder in the helloWorld folder named <i>images</i></li>
+						<li>Search the internet for an image</li>
+						<li>Save the image in the images folder as image.jpg</li>
+						<li>Add the image to helloWorld.html</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Add a Caption</h2>
+					<pre><code style="word-wrap: break-word;">
+&lt;figure&gt;
+	&lt;img src="images/image.gif" alt="an image"&gt;
+	&lt;br /&gt;
+	&lt;figcaption&gt;Caption here&lt;/figcaption&gt;
+&lt;figure&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Easy Button</h2>
+				</section>
+
+				<section>
+					<h2>Forms</h2>
+					<p>Forms are a useful way of collecting data.
+						Lots of the apps we build require creating forms that are both
+						beautiful and easy for people to use. So, let's learn about forms.</p>
+				</section>
+
+				<section>
+					<p>Most of the following elements can and are often used within the &lt;form&gt; element.</p>
+				</section>
+
+				<section>
+					<h2>&lt;input /&gt;</h2>
+					<ul>
+						<li>Empty element</li>
+						<li>Defines field where user can input data</li>
+						<li>Can be used within &lt;form&gt; element</li>
+						<li>Input type varies based on attributes...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>type="text"</h2>
+					<ul>
+						<li>Defines one line of text input</li>
+						<li>Renders as a rectangle</li>
+						<li>Can be used with the name attribute to name the field</li>
+						<li><em>Must</em> be used within a &lt;form&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>type="password"</h2>
+					<ul>
+						<li>Defines a password field</li>
+						<li>Renders as a rectangle</li>
+						<li>Renders text inputted as asterisks * or circles •</li>
+						<li><em>Must</em> be used within a &lt;form&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>type="submit"</h2>
+					<ul>
+						<li>Defines button for submitting data to form-handler</li>
+						<li>Renders as a button with a text value label</li>
+						<li>If no value is added it renders default value of "submit"</li>
+						<li><em>Must</em> be used within a &lt;form&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>type="button"</h2>
+					<ul>
+						<li>Defines button</li>
+						<li>Renders as a button with a text value label</li>
+						<li>Does <em>not</em> have to be used within a &lt;form&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>name=""</h2>
+					<ul>
+						<li>Defines the name of the input element</li>
+						<li>Used to reference elements in JavaScript</li>
+						<li>Only elements with a name will have values passed when a form is submitted.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Input Restrictions</h2>
+					<p>To make sure things don't get out of hand...
+						you can add restrictions to your input elements.
+						(The following are also attributes of &lt;input /&gt;)</p>
+				</section>
+
+				<section>
+					<h2>maxlength=""</h2>
+					<ul>
+						<li>Defines the maximum length of characters that can be entered
+						into an input element</li>
+					</ul>
+					<img src="../presentation-images/day3/maxlength.png" alt="maxlength" />
+				</section>
+
+				<section>
+					<h2>size=""</h2>
+					<ul>
+						<li>Defines the width (in characters) that can be entered
+						into an input element</li>
+						<li>If your size is too small, the browser will not display
+						all the entered text.</li>
+					</ul>
+					<img src="../presentation-images/day3/size1.png" alt="maxlength" />
+					<aside class="notes">This isn't super accurate...depends on font.
+						Most browsers use a different measure (called em units), rather than
+						the width of a character. Using CSS, you can define the width more
+						specifically.</aside>
+				</section>
+
+				<section>
+					<h2>&lt;textarea&gt;&lt;/textarea&gt;</h2>
+					<ul>
+						<li>Defines multi-line text input control</li>
+						<li>Holds unlimited number of characters</li>
+						<li>Text added to the tags will render inside the box</li>
+						<li>Renders fixed width font</li>
+						<textarea>I wonder what this will look like in this document.</textarea>
+						<li>Use attribute cols to set a value for the visible width</li>
+						<li>Use attribute rows to set visible number of lines</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>try{addToHelloWorld();}</h2>
+					<ul>
+						<li>Add an &lt;input&gt; to your helloWorld.html file</li>
+						<li>Add a &lt;textarea&gt; to your helloWorld.html file</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>try{addToHelloWorld();}</h2>
+					<ul>
+						<li>Add an input type="radio" to your helloWorld.html file</li>
+						<li>Add an input type="checkbox" to your helloWorld.html file</li>
+					</ul>
+				<aside class="notes">
+					Users are only able to select one of the possible options;</aside>
+					You can have a preselected radio or checkbox by adding the checked
+					attribute to the input element
+				</section>
+
+				<section>
+					<h2>Can you add an image to a button?</h2>
+				</section>
+
+				<section>
+					<h2>Yes!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;button&gt;
+&lt;img src="images/image.jpg" alt="image" width="10px" height="10px"&gt;
+Button text&lt;/button&gt;</code></pre>
+				<p>You don’t have to include an image. Without one, the button
+					will render with the text inside the element. Images render
+					to the left of any text. <br /> Try adding a button to your file.</p>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4" checked/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5"/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Paging Dr. Dev</h2>
+				</section>
+
+				<section>
+					<h2>Page Navigation</h2>
+					<ul>
+						<li>You can link to another page within the same project
+							by using a relative URL.</li>
+						<li>The browser starts by looking in the folder you're currently inside of.</li>
+						<li>The href value will just be the name of the file if it's located
+							in the same folder.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>&lt;a href="relativeUrl"&gt;&lt;/a&gt;</h2>
+					<ul>
+						<li>Create a new HTML file in the HelloWorld folder</li>
+						<li>Save file as HelloAgainHTML.html</li>
+						<li>Copy code from HelloWorldHTML.html and paste it into HelloAgainHTML.html</li>
+						<li>Make some changes...</li>
+						<li><strong>Add a link inside HelloWorldHTML.html to HelloAgainHTML.html</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Directory Structure</h2>
+					<ul>
+						<li>You can use links to navigate up and down in file structures</li>
+						<li>To go up/out/higher, use <pre>../</pre></li>
+						<li>To go down/in/lower, use <pre>/</pre> </li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<p>If this is your file structure...</p>
+						<img src="../presentation-images/day3/filestructure1.png"
+						<p>How would you access textAdventure.css from textAdventure.html?</p>
+					</section>
+					<section>
+						<pre>href="css/textAdventure.css"</pre>
+						<aside class="notes">This would be your href attribute on an
+							 &lt;a&gt; tag.</aside>
+					</section>
+					<section>
+						<p>If this is your file structure...</p>
+						<img src="../presentation-images/day3/filestructure2.png"
+						<p>How would you access textAdventure.css from textAdventureCopy.html?</p>
+					</section>
+					<section>
+						<pre>href="../textAdventure.css"</pre>
+						<aside class="notes">This would be your href attribute on an
+							 &lt;a&gt; tag.</aside>
+					</section>
+				</section>
+
+				<section>
+				<section data-markdown>
+					```javascript
+					finally {
+						talkAboutWhatWeveLearned();
+					}
+					```
+				</section>
+					<aside class="notes">
+						Discuss the topics covered:
+						Tools used to develop:
+						What HTML means:
+						Tags:
+						HelloWorld:
+						-How did it feel to develop a web page?
+						Team Assignment:
+						-How did it feel to work in a group?
+						-Why is team work is important in development?
+						Overall Day:
+						-What went well?
+						-What could have gone better?
+						-What will do we to improve?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Now We're Done</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal0" checked/>
+							<label for="goal0">try{whatDoYouRemember();}</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal1">Build an HTML document (computer) (cont'd)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal2">Iterative Development and HTML Semantics</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal3">Images</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4" checked/>
+							<label for="goal4">Forms (feat. Input and Buttons)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5" checked/>
+							<label for="goal5">Page Navigation</label>
+						</li>
+					</ul>
+					<p text-align="right">At least...by our definition of done.</p>
+				</section>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+
+		</script>
+
+	</body>
+</html>
