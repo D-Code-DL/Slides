@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Day 2</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Day 2 (02/22/2016)</h1>
+					<h3>D-Code</h3>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1"/>
+							<label for="goal0">What is programming?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal1">Developer tools exploration</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Build an HTML document (classroom)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Build an HTML document (computer)</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					What is programming?
+					</h2>
+				</section>
+
+				<section>
+					<a style="color: #111; font-family: helvetica;" target="_blank" href="https://www.khanacademy.org/video/programming-intro?utm_campaign=embed">
+					</a><br/>
+					<iframe frameborder="0" scrolling="no" width="1280" height="760" src="https://www.khanacademy.org/embed_video?v=FCMxA3m_Imc" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is programming?</h2>
+						<p>Computer code is a collection of typed words that the computer
+							can clearly understand. Just as a human translator might
+							translate from the English language to Spanish, the computer
+							interprets these words as ones and zeros. We as humans use
+							programming languages, instead of writing directly in ones and
+							zeros, so we can easily write and understand the computer
+							code and can organize it.
+						</p>
+					</section>
+					<section>
+						<p>We can think of the different lines of our code as being
+							individual instructions that we give to the computer. The
+							computer follows these instructions explicitly to execute
+							our written code.
+						</p>
+						<p><a href="http://earsketch.gatech.edu/category/learning/anatomy-of-an-earsketch-project/what-is-programming">
+							Anatomy of an EarSketch Project </a><p>
+					</section>
+					<aside class="notes">
+						This definition is from Georgia Tech, a university in Atlanta.
+					</aside>
+				</section>
+
+				<!-- <section>
+					<p>
+					We know that was a lot of information to take in
+						but we promise that as we work together as a development team,
+						 utilizing these concepts to create viable products,
+						 and learning new and exciting concepts and tools,
+						 these first days will seem like a breeze.
+					 </p>
+				</section> -->
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal0">What is programming?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2"/>
+							<label for="goal1">Developer tools exploration</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Build an HTML document (classroom)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Build an HTML document (computer)</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>DEV TIME!!</p>
+				</section>
+
+				<section>
+					<h2>Developers use tools.</h2>
+					<h3>(Instructions for Google Chrome)</h3>
+						<ol>
+							<li>Click "View"</li>
+							<li>Click "Developer"</li>
+							<li>Click "Developer Tools"</li>
+						</ol>
+						<p><i>Or</i>, hit Command + Option + I on your keyboard.</p>
+				</section>
+
+				<section>
+					<h2>Briard Challenge</h2>
+					<img src="../presentation-images/day1/briard.png" alt="This is a briard." style="width:500px;height:500px;">
+				</section>
+
+				<section>
+					<h2>Briard Challenge</h2>
+					<p> Type the following into your browser: <br />
+						<a href="http://www.htmlandcssbook.com/code-samples/chapter-12/example.html">
+							http://www.htmlandcssbook.com/code-samples/chapter-12/example.html </a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Briard Challenge</h2>
+					<ol>
+						<li>Open the Developer Tools</li>
+						<li>Click on the tab that says "Console"</li>
+						<li>Type each line of code, then press enter:
+							<div data-markdown>
+							```javascript
+							intro = document.getElementsByClassName("intro");
+
+							intro[0].innerHTML("Briards are so funny.");
+							```
+						</div>
+						</li>
+						<li>What happens? (Try pressing refresh.)</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Udacity Challenge</h2>
+					<p> Type the following into your browser: <br />
+						<a href="http://udacity.github.io/js-basics/static-home/index.html">
+							http://udacity.github.io/js-basics/static-home/index.html </a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Udacity Challenge</h2>
+					<ol>
+						<li>Open the Developer Tools</li>
+						<li>Click on the tab that says "Console"</li>
+						<li>Type the following code exactly how it appears here, then press enter:
+							<div data-markdown>
+							```javascript
+							$(".super-header-wrapper").html("<img style='width:100%' src='http://goo.gl/WCrBmS'>");
+							```
+						</div>
+						</li>
+						<li>What happens? (Try pressing refresh.)</li>
+					</ol>
+				</section>
+
+			<section>
+				<section>
+					<img src="../presentation-images/day2/teach-a-man-pt1.png" alt="Teach a man to fish" style="width:600px;height:600px;">
+				</section>
+				<section>
+					<img src="../presentation-images/day2/teach-a-man-pt2.png" alt="Teach a fish to man" style="width:350px;height:700px;">
+				</section>
+			</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal0">What is programming?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal1">Developer tools exploration</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3"/>
+							<label for="goal2">Build an HTML document (classroom)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Build an HTML document (computer)</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					Build an HTML document (classroom)
+					</h2>
+				</section>
+
+				<section>
+					<h2>Udacity Challenge v2</h2>
+					<p>Type the following into your browser: <br />
+					<a href="http://udacity.github.io/js-basics/static-home/index.html">
+						http://udacity.github.io/js-basics/static-home/index.html </a>
+						 <br /> <br />
+					What is on an HTML web page?</p>
+				</section>
+
+				<section data-background="../presentation-images/template/loading.jpg">
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal0">What is programming?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal1">Developer tools exploration</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal2">Build an HTML document (classroom)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4"/>
+							<label for="goal3">Build an HTML document (computer)</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>
+					Build an HTML document (computer)
+					</h2>
+				</section>
+
+				<section>
+					<h2>
+						What does HTML stand for?
+					</h2>
+				</section>
+
+				<section>
+					<h2>HTML Speaks</h2>
+					<ul>
+						<li>HTML is short for Hypertext Markup Language</li>
+						<li>programming language === false;</li>
+						<li>Defines the structure of the web page</li>
+						<li>Uses tags (&lt;>) (&lt;/>)</li>
+						<li>Tree-like structure</li>
+					</ul>
+
+					<aside class="notes">
+						HTML stands for Hypertext Markup Language.
+						It’s not a programming language; it’s the markup language used to
+						create websites. (Sort of like taking notes in the margin of a
+						paper; you’ve got the actual information, then the stuff you write
+						about the information.) Web browsers “render” it to show webpages.
+						Developers try to keep the “stuff you write about the information”
+						to structure, like where it falls on the page. They use CSS to make
+						it look nice (“styling”), and JavaScript to make it interactive.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Hello World!...</h2>
+				</section>
+
+				<section>
+					<h2>...If You Write It.</h2>
+					<ol>
+						<li>Make a new folder on your desktop and name it Dcode.</li>
+						<li>Make a new folder in Dcode named helloWorld.</li>
+						<li>Open a new document in Atom.</li>
+						<li>(File > ) Save As…</li>
+						<li>Save file in DCode as helloWorldHTML.html</li>
+						<li>Open Chrome (browser) and...</li>
+						<li>Open helloWorldHTML.html (File > Open File…)</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>What Goes Where?</h2>
+					<h3>Struc·ture</h3>
+					<i>ˈstrək(t)SHər/ (noun) </i> <br /> <br />
+					1. the arrangement of and relations between the parts or elements of something complex.</p>
+					<aside class="notes">
+						Structure: what is where on the page. Think of a newspaper,
+						and how some things are written in bigger text than others,
+						and headers, and images in one place...everything helps you
+						understand better what’s going on in the article.
+						Sure you can think of other examples of media that has structure.
+						(FB, Instagram)
+						Structural markup: elements used to describe headings and paragraphs
+					</aside>
+				</section>
+
+				<section>
+					<img src="../presentation-images/day2/newpaperimg.png" alt="Newspaper" style="width:600px;height:500px;">
+					<aside class="notes">
+						Newspapers are laid out with large headers to get the reader’s
+						attention. And columns to direct the flow of information. Most
+						readers naturally read from top to bottom, left to right.
+						Many webpages are styled to follow the same pattern.
+					</aside>
+				</section>
+
+				<section>
+					<img src="../presentation-images/day2/instagramimg.png" alt="Instagram" style="width:300px;height:500px;">
+					<aside class="notes">
+						Instagram uses headers and table layout to organize images
+						for their users.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Elements</h2>
+					<ul>
+						<li>Individual component of HTML document web page </li>
+						<li>We see them in the document-object model when we look at webpages using developer tools</li>
+						<li>Elements tell browser something about the information they contain</li>
+						<li>Includes tags and information between them</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Tags</h2>
+					<ul>
+						<li>Marks the beginning and end (usually) of each element.</li>
+						<li>Keywords surrounded by angle brackets.</li>
+						<li>Describes the type of element (&lt;head>, &lt;title>, &lt;body> or &lt;footer>)</li>
+						<li>Always open < > (ex: &lt;head>)</li>
+						<li>Sometimes closes </ > (ex: &lt;/head>)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>&lt;!DOCTYPE html></h2>
+					<ul>
+						<li>HTML tag === false;</li>
+						<li>Declares which version of HTML your page is using</li>
+						<li>This is declaring the latest version of HTML (which currently is HTML5)</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>while(writingCode)</h2>
+					<h3>SAVE YOUR PROGRESS!!</h3>
+					<p>File > Save <i>or</i> Ctrl + S</p>
+				</section>
+
+				<section>
+					<h2>&lt;head> &lt;/head></h2>
+					<ul>
+						<li>Contains information about the page</li>
+						<li>Contains the page’s &lt;title></li>
+						<li>Contains &lt;link> to other external files</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;head>
+	&lt;title>My First Web Page&lt;/title>
+&lt;/head>
+
+					</code></pre>
+						<aside class="notes">
+							Notice how title’s opening and closing elements are both inside
+							of the head element? That’s called nesting. Some elements nest
+							inside of others. First to open will be last to close, and v.v.
+						</aside>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;body> &lt;/body></h2>
+					<ul>
+						<li>Contains the HTML document including text, buttons, tables, etc.</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;body&gt;
+&lt;/body&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;h1> &lt;/h1> - &lt;h6> &lt;/h6></h2>
+					<ul>
+						<li>Defines Headings</li>
+						<li>Range in size from &lt;h1> which is the largest to &lt;h6> which is the smallest</li>
+						<li>Used to organize information on the page from most important to least important</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1>Hello World!!&lt;/h1>
+&lt;h2>by: (your name here)&lt;/h2>
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;p> &lt;/p></h2>
+					<ul>
+						<li>Defines paragraphs</li>
+						<li>Small text, usually the bulk of the page content</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;"> &lt;p>You just wrote a webpage using HTML!
+		Next we are going to look at these elements&lt;/p>
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Attributes</h2>
+					<ul>
+						<li>Key/Value Pairs</li>
+						<li>Keys define the attribute </li>
+						<li>Values set the value of the attribute</li>
+						<li>Provides additional info about/Modifies HTML elements</li>
+						<li>Always specified in the start tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;h1 align=“center”>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>break;</h2>
+					<p>Can you change the direction of text using HTML attributes?</p>
+				</section>
+
+				<section>
+					<h2>continue;</h2>
+					<p>Yes you can! Using the dir attribute you can change the direction
+						of the text in an element. There are about 118 different HTML tags
+						though not all are supported by HTML5. And these tags can be
+						modified by many different attributes. </p>
+				</section>
+
+				<section>
+					<h2>&lt;ol> &lt;/ol></h2>
+					<ul>
+						<li>Defines an ordered list</li>
+						<li>Increments numerically as items are added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ol>
+	&lt;li>Create new HTML file&lt;/li>
+	&lt;li>Add HTML code&lt;/li>
+	&lt;li>Save file&lt;/li>
+	&lt;li>Open file in browser&lt;/li>
+&lt;/ol>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;ul> &lt;/ul></h2>
+					<ul>
+						<li>Defines an unordered list</li>
+						<li>Bullet-points items added</li>
+						<li>Each item needs a &lt;li>&lt;/li> tag</li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;ul>
+	&lt;li>Does page load?&lt;/li>
+	&lt;li>Does page display properly?&lt;/li>
+	&lt;li>Are you smiling?&lt;/li>
+&lt;/ul>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML!
+Next we are going to look at these elements&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>&lt;a> &lt;/a></h2>
+					<ul>
+						<li>Defines a hyperlink</li>
+						<li>Needs href attribute to define link destination</li>
+						<li>By default,
+						<ul>
+							<li>Unvisited links are in blue underlined text</li>
+							<li>Visited links are purple underlined text</li>
+							<li>Active links are red underlined text</li>
+						</ul></li>
+					</ul>
+					<pre><code style="word-wrap: break-word;">&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+					</code></pre>
+					<aside class="notes">
+						You'll have to change the text between the p tags here.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Your First Webpage!!</h2>
+					<pre><code style="word-wrap: break-word;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head>
+		&lt;title>My First Web Page&lt;/title>
+	&lt;/head>
+	&lt;body&gt;
+		&lt;h1 align=“center”>Hello World!!&lt;/h1>
+		&lt;h2>by: (your name here)&lt;/h2>
+		&lt;p>You just wrote a webpage using HTML at
+			&lt;a href=“http://www.detroitedisonpsa.org”>DEPSA&lt;/a>
+		&lt;/p>
+		&lt;ol>
+			&lt;li>Create new HTML file&lt;/li>
+			&lt;li>Add HTML code&lt;/li>
+			&lt;li>Save file&lt;/li>
+			&lt;li>Open file in browser&lt;/li>
+		&lt;/ol>
+		&lt;ul>
+			&lt;li>Does page load?&lt;/li>
+			&lt;li>Does page display properly?&lt;/li>
+			&lt;li>Are you smiling?&lt;/li>
+		&lt;/ul>
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Ship It!</h2>
+					<p>In Chrome:</p>
+					<ul>
+						<li>Click “File”,</li>
+						<li>Select “Open File”</li>
+						<li>Open “HelloWorldHTML.html</li>
+					</ul>
+					<aside class="notes">
+					Discussion:
+					If there are any errors on their pages:
+					-What could we have done while developing to catch them sooner?
+					*Importance of testing and refactoring during the development cycle.
+					-Remember that time you waited until the last minute to write that paper??
+					</aside>
+				</section>
+
+				<section>
+					<h2>Varieties of Fish</h2>
+					<p>Resources for HTML</p>
+					<ul><li>MDN (<a href="developer.mozilla.org/en-US/docs/Web/HTML">developer.mozilla.org/en-US/docs/Web/HTML</a>)</li></ul>
+					<p>Resources for HTML tags</p>
+					<ul><li>W3 Schools (<a href="www.w3schools.com/tags/">www.w3schools.com/tags/</a>)</li>
+					<li>HTML Dog (<a href="www.htmldog.com/references/html/tags/">www.htmldog.com/references/html/tags/</a>)</li></ul>
+				</section>
+
+				<section>
+				<section data-markdown>
+					```javascript
+					finally {
+						talkAboutWhatWeveLearned();
+					}
+					```
+				</section>
+					<aside class="notes">
+						Discuss the topics covered:
+						Tools used to develop:
+						What HTML means:
+						Tags:
+						HelloWorld:
+						-How did it feel to develop a web page?
+						Team Assignment:
+						-How did it feel to work in a group?
+						-Why is team work is important in development?
+						Overall Day:
+						-What went well?
+						-What could have gone better?
+						-What will do we to improve?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Now We're Done</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked/>
+							<label for="goal0">What is programming?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" checked/>
+							<label for="goal1">Developer tools exploration</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" checked/>
+							<label for="goal2">Build an HTML document (classroom)</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4" checked/>
+							<label for="goal3">Build an HTML document (computer)</label>
+						</li>
+					</ul>
+
+					<p text-align="right">At least...by our definition of done.</p>
+				</section>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+
+		</script>
+
+	</body>
+</html>
