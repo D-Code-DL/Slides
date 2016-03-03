@@ -640,6 +640,191 @@ Button text&lt;/button&gt;</code></pre>
 						</section>
 					</section>
 
+					<section>
+						<h2>Block and Inline Elements</h2>
+					</section>
+
+					<section>
+						<p>Elements that always look like they start on a new line are called
+						block elements.<br /><br />Examples:</p>
+						<ul>
+							<li>h1</li>
+							<li>p</li>
+							<li>ul</li>
+							<li>li</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>Elements that appear to continue on the same line
+							are called inline elements.<br /><br />Examples:</p>
+						<ul>
+							<li>em</li>
+							<li>img</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Block and Inline Elements</h2>
+						<p>We'll look at two specific elements:</p>
+						<h3>div and span.</h3>
+					</section>
+
+					<section>
+						<h2>&lt;div&gt;&lt;/div&gt;</h2>
+						<ul>
+							<li>a block element</li>
+							<li>abbreviation for "division"</li>
+							<li>used to group elements together in a block-level "box"</li>
+							<li>separates information it encloses from everything else</li>
+							<li>might be used for header, or to separate contents logically</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>&lt;span&gt;&lt;/span&gt;</h2>
+						<ul>
+							<li>an inline element</li>
+							<li>used to group elements on one line together</li>
+							<li>usually used to make some items appear a certain way with CSS
+								<ul>
+									<li>example: use span within a &lt;p&gt;&lt;/p&gt; element</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>try{useDiv();}</h2>
+						<ul>
+							<li>Open helloWorldHTML.html</li>
+							<li>Create a div tag with an id of "header" to surround the first
+							three elements</li>
+						</ul>
+						<pre class="fragment"><code style="word-wrap: break-word;">&lt;body&gt;
+	&lt;div id="header"&gt;
+		&lt;h1 align="center"&gt;Hello World!!&lt;/h1&gt;
+		&lt;h2&gt;by: (your name here)&lt;/h2&gt;
+		&lt;p&gt;You just wrote a ... &lt;/p&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+						<aside class="notes">
+							Students should only be adding to the first three elements on the
+								page (h1, h2, p).
+						</aside>
+					</section>
+
+					<section>
+						<h2>try{useDiv();}</h2>
+						<ul>
+							<li>What happens on the web page when you've made this change?</li>
+							<li>Now try adding the attribute style="background:#FF0000;" to the
+								&lt;div&gt;. What changes?</li>
+						</ul>
+						<aside class="notes">Students should add the attribute to the div
+							with the ”header” tag. Make sure students add a semi-colon
+							inside the quotation.
+						</aside>
+					</section>
+
+					<section>
+						<h2>try{useSpan();}</h2>
+						<ul>
+							<li>Create a span tag with an id of "pagespan" to surround the words
+							"wrote a webpage using HTML".</li>
+						</ul>
+						<pre class="fragment"><code style="word-wrap: break-word;">&lt;p&gt;You just
+&lt;span id="pagespan"&gt; wrote a webpage using HTML &lt;/span&gt;
+at...&lt;/p&gt;</code></pre>
+					</section>
+
+					<section>
+						<h2>try{useSpan();}</h2>
+						<ul>
+							<li>What happens on the web page when you've made this change?</li>
+							<li>Now try adding the attribute style="color:#0000FF;" to the
+								&lt;span&gt;. What changes?</li>
+						</ul>
+						<aside class="notes">Students should add the attribute to the span
+							tag. Make sure students add a semi-colon inside the quotation.
+						</aside>
+					</section>
+
+					<section>
+						<h2>try{useCss();}</h2>
+						<h3>We're transitioning into using CSS. Lots of steps, so hold on!</h3>
+						<ul>
+							<li>Delete the style attributes you just added to the div and the span.</li>
+							<li>Open a new document.</li>
+							<li>Write the following:</li>
+						</ul>
+						<aside class="notes">Students: only delete the attributes and their values!
+						</aside>
+					</section>
+
+					<section>
+						<h2>try{useCss();}</h2>
+						<pre class="fragment"><code style="word-wrap: break-word;">#header{
+	background-color: red;
+}
+
+#pagespan {
+	color: green;
+}</code></pre>
+					</section>
+
+					<section>
+						<h2>try{useCss();}</h2>
+						<ul>
+							<li>Go to File > Save As...</li>
+							<li>Create a folder called css in the same folder that holds
+							helloWorldHTML.html.</li>
+							<li>Inside this css folder, save the document as stylesheet.css .</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>try{useCss();}</h2>
+						<ul>
+							<li>Go back to helloWorldHTML.html .</li>
+							<li>Add <br />
+							&lt;link href="css/stylesheet.css" rel="stylesheet"&gt; to the
+						&lt;head&gt; element.</li>
+							<li>Save the document.</li>
+							<li>Refresh the page in the browser. What happens?</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Block and Inline Elements</h2>
+						<ul>
+							<li>Takeaway: div and span are useful for grouping items together,
+							and for styling them...</li>
+							<li>...but what is this CSS stuff??</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Goals</h2>
+						<ul class="checklist">
+							<li>
+								<input type="checkbox" id="goal0" checked/>
+								<label for="goal0">Block and Inline Elements</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal1"/>
+								<label for="goal1">About CSS</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal2"/>
+								<label for="goal2">CSS Style Precedence</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal3"/>
+								<label for="goal3">Style a Sample Page</label>
+							</li>
+						</ul>
+					</section>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
