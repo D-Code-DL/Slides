@@ -558,7 +558,7 @@ Button text&lt;/button&gt;</code></pre>
 
 				<div class="slides">
 					<section>
-						<h1>Day 4 (Even More) (03/03/2016)</h1>
+						<h1>03/07/2016</h1>
 						<h3>D-Code</h3>
 					</section>
 
@@ -825,6 +825,312 @@ at...&lt;/p&gt;</code></pre>
 							</li>
 						</ul>
 					</section>
+
+					<section>
+						<h2>About CSS</h2>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li>Stands for "cascading style sheets"</li>
+							<li>Controls the presentation of the page (what it looks like)</li>
+							<li>Separates presentation from content</li>
+							<li>Read by browser from top to bottom</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li>Applies rules to different parts of HTML text to make it look different</li>
+							<li>Treats each element like it lives in an invisible box, then applies that rule to everything in the box.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li>It’s usually a good idea to put your CSS in a separate document.
+								 That way, you can switch styles by just changing a link.</li>
+							<li>If you have to put it in the same document, you can put the
+								 CSS code in a &lt;style&gt;&lt;/style&gt; element inside
+								 the &lt;head&gt;&lt;/head&gt; element.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li>A CSS rule is made up of a selector and a declaration.</li>
+							<li>Selector: tells you which element(s) the rule applies to.</li>
+							<li>Declaration: tells you how the element(s) should be styled.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<img src="../presentation-images/day4/cssrule.png" alt="CSS rule">
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li>A declaration is made up of a property and a value.</li>
+							<li>Property/value same as the key-value pairs we talked about</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS</h2>
+						<img src="../presentation-images/day4/cssdeclaration.png" alt="CSS declaration">
+					</section>
+
+					<section>
+						<h2>CSS Rules</h2>
+						<ul>
+							<li>Rules can be made for <em>specific elements</em> using their ids
+							(# in front of selector)</li>
+						</ul>
+						<pre><code style="word-wrap: break-word;">	#header{
+		background-color: red;
+	}
+
+	#pagespan {
+		color: green;
+	}</code></pre>
+					</section>
+
+					<section>
+						<h2>CSS Rules</h2>
+						<ul>
+							<li>Or they can be made for all of a certain type of element using
+							their name (nothing required in front of selector)</li>
+						</ul>
+						<pre><code style="word-wrap: break-word;">	body {
+	background-image: url("../images/detroit3_18x24.jpg");
+	}</code></pre>
+					</section>
+
+					<section>
+						<h2>CSS Rules</h2>
+						<ul>
+							<li>We can also make rules for something called a class. A class
+								is just another attribute you give an element to identify it,
+								kind of like a label for grouping different elements together.</li>
+								<li>A CSS rule for a class will have a period in front of it.</li>
+						</ul>
+						<pre><code style="word-wrap: break-word;">	.thisclass {
+	...
+	}</code></pre>
+					</section>
+
+					<section>
+						<h2>CSS Rules</h2>
+						<p>Example: </p>
+						<pre><code style="word-wrap: break-word;">&lt;div class=“page”&gt;
+&lt;h1&gt;Potatoes&lt;/h1&gt;
+&lt;p&gt;There are so many types of potatoes.&lt;/p&gt;
+&lt;/div&gt;
+
+.page {
+	border: 1px solid;
+	background-color: #efefef;
+}
+</code></pre>
+					</section>
+
+					<section>
+						<h2>CSS Rules</h2>
+						<p>Once you know how to write a CSS rule, you can just keep learning
+							 what declarations to use (and how) on different elements!
+						</p>
+					</section>
+
+					<section>
+						<img src="../presentation-images/day4/css_example.png" alt="CSS example" />
+					</section>
+
+					<section>
+						<h2>Goals</h2>
+						<ul class="checklist">
+							<li>
+								<input type="checkbox" id="goal0" checked/>
+								<label for="goal0">Block and Inline Elements</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal1" checked/>
+								<label for="goal1">About CSS</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal2"/>
+								<label for="goal2">CSS Style Precedence</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal3"/>
+								<label for="goal3">Style a Sample Page</label>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>CSS Style Precedence</h2>
+						<aside class="notes">Sometimes, CSS rules overlap on the same element
+							or elements. Browsers use precedence rules to sort out which rule
+							should really be used in those situations.  </aside>
+					</section>
+
+					<section>
+						<h2>CSS Style Precedence</h2>
+						<p>You’re going to teach us (yes, you read that right) which CSS
+							rules are most important in conflict situations.</p>
+					</section>
+
+					<section>
+						<h2>try{teachTheClass();}</h2>
+						<h3>"Last Rule"</h3>
+						<ul>
+							<li>Make two CSS rules that apply to the same selector, but give them different values.</li>
+							<li>What happens on the page? What rule can you come up with from this?</li>
+						</ul>
+						<aside class="notes">When selectors are identical, the rule that
+							comes later will take precedence.
+</aside>
+					</section>
+
+					<section>
+						<h2>try{teachTheClass();}</h2>
+						<h3>"Specificity"</h3>
+						<ul>
+							<li>Make one CSS rule that applies to multiple
+								elements on a page (e.g., to a certain tag).</li>
+							<li>Then, make another that applies to just one of those elements
+								 (e.g., to a specific id or class).</li>
+						 	 <li>What happens on the page? What rule can you come up
+								 with from this?</li>
+						</ul>
+						<aside class="notes">The more specific rule will take precedence.</aside>
+					</section>
+
+					<section>
+						<h2>try{teachTheClass();}</h2>
+						<h3>"Importance"</h3>
+						<ul>
+							<li>Putting !important after a value shows that it should take
+								precedence over other rules that apply to the same element.</li>
+						</ul>
+						<pre><code style="word-wrap: break-word;">	div p {
+	font-size: 14px !important;
+	}</code></pre>
+					</section>
+
+					<section>
+						<h2>try{teachTheClass();}</h2>
+						<h3>"Inheritance"</h3>
+						<ul>
+							<li>An inherited property is one that is automatically applied to
+								an element because it has already been applied to a parent
+								element (the element that contains it).</li>
+								<li>Example: specifying font-family and color properties
+									 on &lt;body&gt; makes them apply to most child elements.
+								 </li>
+						</ul>
+						<aside class="notes">“The element that contains it”: you can see
+							 this on developer tools, when you mouse over elements in the
+							 console.</aside>
+					</section>
+
+					<section>
+						<h2>try{teachTheClass();}</h2>
+						<h3>"Inheritance (continued)"</h3>
+						<ul>
+							<li>If you want an element to inherit a property from its
+								 parent that it wouldn’t normally inherit, use the value inherit.</li>
+						</ul>
+						<pre><code style="word-wrap: break-word;">	.page {
+	border: 1px solid #665544;
+	background-color: #efefef;
+	padding: inherit;
+	}</code></pre>
+					</section>
+
+					<section data-background="../presentation-images/template/loading.jpg">
+						<aside class="notes">break time</aside>
+					</section>
+
+					<section>
+						<h2>Goals</h2>
+						<ul class="checklist">
+							<li>
+								<input type="checkbox" id="goal0" checked/>
+								<label for="goal0">Block and Inline Elements</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal1" checked/>
+								<label for="goal1">About CSS</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal2" checked/>
+								<label for="goal2">CSS Style Precedence</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal3"/>
+								<label for="goal3">Style a Sample Page</label>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Style a Sample Page</h2>
+					</section>
+
+					<section>
+						<h2>try{styleSamplePage();}</h2>
+						<ul>
+							<li>We will project a sample page on the board.</li>
+							<li>Your goal, in teams of three, is to replicate the page as closely as possible.</li>
+							<li>We will give you a list of the properties that you must use.</li>
+							<li>You have 30 minutes, followed by 10 minutes to present.</li>
+						</ul>
+						<aside class="notes">http://www.htmlandcssbook.com/code-samples/chapter-12/example.html</aside>
+					</section>
+
+					<section>
+						<img src="../presentation-images/day4/briard_selectors.png" alt="selectors" >
+					</section>
+
+					<section data-markdown>
+						```javascript
+						finally {
+							talkAboutWhatWeveLearned();
+						}
+						```
+					</section>
+
+					<section>
+						<h2>Now We're Done</h2>
+						<ul class="checklist">
+							<li>
+								<input type="checkbox" id="goal0" checked/>
+								<label for="goal0">Block and Inline Elements</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal1" checked/>
+								<label for="goal1">About CSS</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal2" checked/>
+								<label for="goal2">CSS Style Precedence</label>
+							</li>
+							<li>
+								<input type="checkbox" id="goal3" checked/>
+								<label for="goal3">Style a Sample Page</label>
+							</li>
+						</ul>
+						<p text-align="right">At least...by our definition of done.</p>
+					</section>
+
+
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
