@@ -1,0 +1,14 @@
+body{
+  text-align: center;
+}
+
+#userName{
+  color: black;
+  text-shadow: 2px 2px blue;
+}
+
+#welcomeSection{
+  padding: 20px;
+  color: blue;
+  text-shadow: 2px 2px black;
+}
