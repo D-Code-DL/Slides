@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Intro to Javascript</title>
+
+	<meta name="description" content="An introduction to javascript programming language">
+	<meta name="author" content="D-Code">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>05/04/2016</h1>
+				<h3>D-Code</h3>
+			</section>
+
+			<section>
+				<h2>Welcome!</h2>
+			</section>
+
+			<section>
+				<h2>StandUp</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1"/>
+						<label for="goal1">Intro to Javascript</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2"/>
+						<label for="goal2">Javascript and Web Pages</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3"/>
+						<label for="goal3">Intro to Javascript Functions</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4"/>
+						<label for="goal4">Use a Function</label>
+					</li>
+				</ul>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				try {
+					whatDoYouRemember();
+				}
+				```
+			</p>
+		</section>
+
+		<section>
+			<h2>What ‘Chu Talkin’ Bout Willis</h2>
+		</section>
+
+		<section>
+			<h2>Communication is Key</h2>
+			<p>
+				When humans want to communicate with other humans they use a common language such as English, French, Spanish or American Sign Language.
+				<br>
+				What happens when two humans speak different languages?
+			</p>
+			<image src="../presentation-images/day9/translation_failure_meme.jpg" height="200px">
+				<p>Well communication can become complex.</p>
+			</section>
+
+			<section>
+				<section>
+					<h2>How do humans communicate with computers?</h2>
+					<p>Well computers speak a language called Binary</p>
+					<image src="../presentation-images/day9/binary_meme.jpg" height="200px">
+					</section>
+					<section>
+						<p>
+							Speaking binary is hard so humans started to create easier ways to communicate with their creations. First there were punch cards. Then there was FORTRAN. Then Pascal. Next Objective-C. And finally Java.
+							<br>
+							Not really… there are an estimated 500 programming languages. We’re only paying attention to one but you’re encouraged to investigate others. Most languages are iterations of earlier languages. Each trying to make it easier for developers to develop and computers to compute.
+							<a href="https://en.wikipedia.org/wiki/History_of_programming_languages">https://en.wikipedia.org/wiki/History_of_programming_languages</a>
+							<a href="https://en.wikipedia.org/wiki/List_of_programming_languages">https://en.wikipedia.org/wiki/List_of_programming_languages</a>
+						</p>
+					</section>
+				</section>
+				<section data-markdown>
+					## So what makes Javascript so special?
+
+					* Javascript is the most popular programming language for web development.
+					* Javascript was created by Netscape (a web browser) in the 1990s.
+					* Javascript sounds like Java for a reason, they leveraged the name but there’s no relation.
+					* Javascript provides functionality/behavior to web pages allowing users to interact with them.
+					* Javascript is written in a text editor and saved with a .js extension.
+				</section>
+				<section>
+					<section data-markdown>
+						## `break;`
+
+						Why would we want to interact with web pages?
+					</section>
+					<section data-markdown>
+						## `continue;`
+
+						While web pages are great for displaying information (as you’ve all proven with your projects), they are also useful for collecting information from users. You want to find Queen Bey’s latest music video? Then you can search youtube for it by typing her name and hitting enter. The web browser then collects the text you entered and transmits that to a server that queries all videos looking for a match, it then returns that information to you and displays it on the page. So, without Javascript, we wouldn’t have access to the Queen.
+					</section>
+				</section>
+
+				<section data-markdown>
+					## The Three Musketeers
+					You’ve met HTML, he takes care of organizing the structure and content of the page.
+					<br>
+					And CSS, she handles the presentation and style of the page.
+					<br>
+					So allow me to introduce their best friend, **Javascript**, she specifies the page’s behavior.
+					The three together create what we know of a web page today… styled information that we can interact with.
+				</section>
+
+				<section data-markdown>
+					## To Compile or Not To Compile… that really is the question
+					* Some programming languages, like Java have to be compiled.
+					* In its early years, Javascript was strictly a scripting language… having to be interpreted.
+					* Today it’s morphed into a hybrid that’s interpreted and compiled on the fly.
+				</section>
+
+				<section data-markdown>
+					## Great, but what does that mean?
+					That means:
+					* you write your javascript code
+					* the browser loads the code and parses it
+					* then it executes the code as it encounters it
+					* while executing it builds the Document Object Model
+				</section>
+
+				<section>
+					<section data-markdown>
+						## `break;`
+
+						What is the Document Object Model?
+					</section>
+
+					<section data-markdown>
+						## `continue;`
+
+						“The Document Object Model (DOM) is an application programming interface (API) for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.”
+
+						Citation: <a href="https://www.w3.org/TR/DOM-Level-2-Core/introduction.html">https://www.w3.org/TR/DOM-Level-2-Core/introduction.html</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>&lt;script&gt;&lt;/script&gt;</h2>
+					Script element
+					<ul>
+					<li>this element contains JavaScript code</li>
+					<li>could put it in a separate file, just like CSS, extension .js, for the same purpose</li>
+				</ul>
+				</section>
+
+				<section data-markdown>
+					## By the way...why script?
+					>"In computer programming, a script is a program or sequence of instructions that is interpreted or carried out by another program rather than by the computer processor(as a compiled program is)."
+
+					Citation:<a href="http://searchenterpriselinux.techtarget.com/definition/script">http://searchenterpriselinux.techtarget.com/definition/script</a>
+
+JavaScript is interpreted by the web browser (Chrome, IE, Safari…). That's why the W3 Schools site is always telling you what browsers certain elements/attributes are compatible with.
+				</section>
+
+				<section>
+					<h2>Conjunction Junction What’s a Function?</h2>
+					<image src="../presentation-images/day9/conjunction-junction_meme.jpg">
+				</section>
+
+				<section data-markdown>
+					## Function
+					* Organized lines of code that complete a job
+					* Is executed when invoked (such as clicking on a button)
+
+					Citation:<a href="http://www.w3schools.com/js/js_functions.asp">http://www.w3schools.com/js/js_functions.asp</a>
+				</section>
+
+				<section data-markdown>
+					## Called by Any Other Name, It Doesn’t Work
+					* Functions must be named
+					* Functions must be called by their name
+					* Functions need the keyword “function” to be identified as a function
+					* Functions end in a parenthesis () which may include parameters
+				</section>
+
+				<section data-markdown>
+					## (string)
+					* Parameters define what must be passed into a function for it to function
+					* Functions can have more than one parameter
+					* Parameters are separated by commas ,
+					* Once passed inside it can be used by the function as a local variable
+				</section>
+
+				<section data-markdown>
+					## But what’s a variable??
+					I don’t know… you tell me.
+				</section>
+
+				<section data-markdown>
+					## var
+					In javascript you define a variable with the keyword var
+					Variables can be strings (think text), numbers (with or without decimals) or booleans (true or false)
+					```javascript
+					var string = “This is a string and it uses quotation marks”;
+					var number = 3;
+					var boolean = true;
+					```
+				</section>
+
+				<section data-markdown>
+					## Human Readable
+					Did you notice how that code was easy to read?
+					<br>
+					That’s what is meant by human readable… code that reads like sentences.
+				</section>
+
+				<section data-markdown>
+					## It’s like magic
+					Functions need to be invoked by:
+					* a user action (mouse roll or click)
+					* the browser event (page loading)
+					* being called by another function
+					* or calling itself
+				</section>
+
+				<section data-markdown>
+					## Functions are Giving
+					* They can return values
+					* The code inside the function stops executing when it hits a return statement
+					* You must use the return keyword to define what is being provided from the function
+				</section>
+
+				<section data-markdown>
+					## Functions are Selfish
+					* Functions do not have to return any value
+					* When functions do not return the stop executing when they reach the end bracket
+				</section>
+
+				<section>
+				<section>
+					<h2>Functional Machines</h2>
+				</section>
+				<section>
+					<image src="../presentation-images/day9/simple_function_machine.png">
+				</section>
+				<section>
+					<image src="../presentation-images/day9/complex_function_machine.png">
+				</section>
+			</section>
+
+			<section>
+				<section>
+				<h2>Anatomy of a Function</h2>
+			</section>
+			<section>
+				<image src="../presentation-images/day9/javascript_function.png">
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					## `break;`
+
+					What is this function doing?
+					```javascript
+					function printName(name){
+					console.log(name);}```
+				</section>
+				<section data-markdown>
+					## `continue;`
+
+					This function is printing the user’s name to the console.
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					## `break;`
+
+					Meet Mike.
+					Mike is 17.
+					Mike had a birthday.
+					Now Mike is 18.
+
+					Complete the function that fulfills the story above.
+					```javascript
+					function birthday(age){
+					var preBDayAge = age;
+					var postBDayAge = age +  ;
+					return postBDayAge;}```
+
+					What is the return value?
+				</section>
+
+				<section data-markdown>
+					## `continue;`
+					```javascript
+					function birthday(age){
+					var preBDayAge = age;
+					var postBDayAge = age +  1;
+					return postBDayAge;}```
+
+					The return value is 18;
+				</section>
+			</section>
+
+			<section data-markdown>
+				## `try{clickAButton();}`
+
+				* Download the onClick.html file we emailed to you
+				* Open the file in your browswer
+				* What happens when you click the buttons?
+				* Make both buttons work the same.
+			</section>
+
+			<section data-markdown>
+				## User Stories
+				User stories are ways to capture desired functionality of software from the perspective of the end user (ie, the person who will be using the software in the real world).
+
+				They always include:
+				* the type of user
+				* what the user wants to software to do for them
+				* and why
+			</section>
+
+			<section>
+				<section data-markdown>
+					## `break;`
+
+					How would we write a user story for a student who wants the school website to show the calendar when they click a link?
+				</section>
+
+				<section data-markdown>
+					## `continue;`
+
+					As a student
+					<br>
+					I want to click a link to see the school calendar
+					<br>
+					So I can see what days we have off
+				</section>
+			</section>
+
+			<section data-markdown>
+				## There’s more than one way to add a js file
+				You can add javascript to a web page by either entering the javascript directly into the &lt;script&gt; tag in the html file
+				<br>
+				Or
+				<br>
+				By creating a separate file and using the src attribute in the html to link to the file
+			</section>
+
+			<section data-markdown>
+				## `catch{clickMoreButtons();}`
+
+				Use the files in onclick2.zip to complete this user story:
+
+				As a user,
+				<br>
+				I want to enter my name and then have it added to the web page
+				<br>
+				So that I can feel special.
+			</section>
+
+
+				<section data-markdown>
+					## Creative Expression
+					* Draft an idea for an interactive web page.
+					* Who are the users?
+					* What information does it offer to it’s users?
+					* What information does it collect from it’s users?
+					* What other functionality does it have?
+				</section>
+					<section data-markdown>
+						```javascript
+						finally {
+							talkAboutWhatWeveLearned();
+						}
+						```
+					</section>
+
+				</div>
+
+			</div>
+
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+
+			<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+
+			</script>
+
+		</body>
+		</html>
