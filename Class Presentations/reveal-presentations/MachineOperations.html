@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Machine Operations</title>
+
+	<meta name="description" content="An introduction to javascript programming language">
+	<meta name="author" content="D-Code">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>05/07/2016</h1>
+				<h3>D-Code</h3>
+			</section>
+
+			<section>
+				<h2>Welcome!</h2>
+			</section>
+
+			<section>
+				<h2>StandUp</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1"/>
+						<label for="goal1">JS Syntax</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2"/>
+						<label for="goal2">Development Planning</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3"/>
+						<label for="goal3">Common Conditionals</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4"/>
+						<label for="goal4">Making It Work</label>
+					</li>
+				</ul>
+			</section>
+
+			<section data-markdown>## codeReviews(){}
+				* Review these code snippets and correct them so they function.
+			</section>
+			<section>
+				<section data-markdown>
+					```javascript
+					alertFunction(){
+						alert(“This works!”);
+					}```
+				</section>
+				<section data-markdown>
+					```javascript
+					function  (){
+						var name = prompt(“What is your name?);
+						document.getElementById(“name”).innerhtml = name;
+					}```
+				</section>
+				<section data-markdown>
+					```javascript
+					function additionFunction(x){
+						var ans = x + 200;
+						return  ;
+					}```
+				</section>
+				<section data-markdown>
+					```javascript
+					function alertNameFunction( ){
+						var name = parameter;
+						alert(“Good Job ” name);
+					}```
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					```javascript
+					try {
+						whatDoYouRemember();
+					}```
+				</p>
+			</section>
+			<section>What is a String?</section>
+			<section>A String is text inside of quotes.</section>
+			<section>What is a Number?</section>
+			<section>A Number is a number with or without decimals.</section>
+			<section>What is a boolean?</section>
+			<section>A boolean is true or false.</section>
+		</section>
+
+		<section data-markdown># Tomato Tomato Again!</section>
+		<section data-markdown>## But first… More Vocabulary Words!</section>
+		<section data-markdown>## Operator
+			* An operator is a symbol used to assign or compare values and complete arithmetic.
+		</section>
+		<section data-markdown> ## The Assignment Operator
+			=
+			* is used to assign a value to a variable.
+			Example:
+			var three = 3; This assigns the value of 3 to the variable three.
+		</section>
+
+		<section>
+		  <section data-markdown> ## Math Operators
+		    We’ll start with familiar faces...
+		    + : Addition - is used to add variable values together.
+		    - : Subtraction - is used to subtract variable values from one another.
+		    *: Multiplication - is used to multiply variable values together
+		    / : Division - is used to divide variable values from one another.
+		  </section>
+		  <section data-markdown> ##Math Operators Cont.
+		    Now for some new friends…
+		    % : Modulus - is used to get the reminder in a division
+		    ++ : Increment - is used to count up by one
+		    -- : Decrement - is used to count down by one
+
+		    Examples:
+		    var one = 5 % 2; This assigns 5 modulus 2, which is 1 to variable one.
+		    var five = ++4; This assigns the increment of 4, which is 5 to variable five.
+		    var three = --4; This assigns the decrement of 4, which is 3 to variable three.
+
+		    Cite: http://www.w3schools.com/jsref/jsref_operators.asp
+		  </section>
+		</section>
+
+		<section>
+		  <section data-markdown>## break;
+		    What is the value of seven?
+
+		    var five = 5;
+		    var two = 3;
+		    var seven = five + two;
+		  </section>
+		  <section data-markdown>## continue;
+		    The value of seven is 8.
+		    Wait! What?
+		    Yup… because the variable five was assigned a value of 5 and the variable two was assigned the value of 3. The variable seven is assigned the value of those variables added together.
+
+		    So… seven = 5 + 3;
+		  </section>
+		  <section data-markdown>
+		    And before you freak out, that’s okay. A **variable __is the holder for the values__** you store within it. Good coding practice is to *write variable names that describe their content*.
+		    **How could our variable be renamed to be less confusing?**
+		  </section>
+		</section>
+
+		<section data-markdown># #Other Words to Know
+		  **Expression** is a combination of variables, values and operators that produces a value.
+		  Var number = 2 + 4 is an expression.
+		  **Comments** are notes developers write to document their code
+		  //This is a comment. It’s text preceded by //
+
+		  Cite: http://www.w3schools.com/js/js_syntax.asp
+
+		  <section data-markdown>## Caution! Reserved Words Ahead
+		    There are some words you need to know to not use in your code. These words are **Reserved**. They are Javascript’s keywords and should not be used in naming functions, variables or objects.
+		    *function
+		    *var
+		    *boolean
+
+		    And more! Checkout the link for the complete list.
+		    Cite: http://www.w3schools.com/js/js_reserved.asp
+
+		    <section>
+		      <section data-markdown>## break;
+		        What’s wrong with this code?
+
+		        someName = prompt(“Enter your name)
+
+		      </section>
+		      <section data-markdown>## continue;
+
+		        **var** someName = prompt(“Enter your name**”**)**;**
+		      </section>
+		    </section>
+
+		    <section data-markdown>## End It!
+		      Each expression must end in a semi-colon.
+		    </section>
+
+		    <section data-markdown>## Conditional Operators
+		      > : Greater Than - evaluates if the variable on the left is greater than the right
+		      >= : Greater Than or Equal To - evaluates if the variable on the left is greater than or equal to the right
+		      < : Less Than - evaluates if the variable on the left is less than the right
+		      <= : Less Than or Equal To operator evaluates if the variable on the left is less than or equal to the right
+		      == : Equality - evaluates if the variable on the left is equal to the right
+		      === : Equality - evaluates if the variable on the left is equal in value and type to the right
+		      != : Not Equals - evaluates if the variable on the left is **not** equal to the right
+		      !== : Not Equals - evaluates if the variable on the left is **not** equal in value and type to the right
+		    </section>
+
+		    <section data-markdown>## Logical Operators
+		      && : And - used to evaluate if both are true or false
+		      || : Or - used to evaluate if one or another is true or false
+		      ! : Not - used to evaluate the negative of a true or false
+		    </section>
+		    <section data-markdown>
+		      ```javascript
+		      function logicalOperator(x, y){
+		        if(x == y){
+		          console.log(“They are equal”);
+		        }
+		        else if(x > y){
+		          console.log(“x is greater than y”);
+		        }
+		        else if(x < 2 && y > x)
+		        console.log(“x is greater than 2 AND y is greater than x);
+		      }
+		      Else{
+		        console.log(“We need to add more conditionals!”);
+		      }
+		    }```
+		  </section>
+		  <aside> Give x and y different values and ask the class which statement will print</aside>
+
+		  <section>
+		    <h2>Huddle</h2>
+		    <ul class="checklist">
+		      <li>
+		        <input type="checkbox" id="goal1" checked/>
+		        <label for="goal1">JS Syntax</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal2"/>
+		        <label for="goal2">Development Planning</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal3"/>
+		        <label for="goal3">Common Conditionals</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal4"/>
+		        <label for="goal4">Making It Work</label>
+		      </li>
+		    </ul>
+		  </section>
+
+		  <section data-markdown>## Business Sense
+		    It takes many different people to get a successful project out the door and in the market. Each one is important, but business usually starts with team members in business development.
+
+		    Business development
+
+		    How this happens differs by organization and team
+
+		    For this exercise you’ll need your Website Idea creative expression.
+		  </section>
+
+		  <section data-markdown>## try{youAreInBusiness()}
+
+		    A company opened up a RFP, Request for Proposal. You’re really interested in doing this work for them. Read over the website idea.
+
+		    *craft 3 questions that you need to have answered before agreeing to take on the work.
+		    *write the answers to those questions
+
+		    https://en.wikipedia.org/wiki/Request_for_proposal
+		  </section>
+
+		  <section data-markdown>## designYourTeam(){}
+		    Who do you need on the team to complete the project?
+		  </section>
+
+		  <section data-markdown>## buildYourTeam(){}
+
+		    Your company has:
+		    *Developers | rate: $100/hour
+		    *Designers | rate: $100/hour
+		    *QAs| rate: $100/hour
+		    *Project Managers | rate: $100/hour
+
+		    The project budget is $50,000 and they want it shipped in no more than 2 months. Your developers have told you it’s about 300 hours worth of work. Your designer will need at least 50 hours to complete the design.
+		    Based on that, how will you staff this project?
+		  </section>
+
+		  <section>
+		    <h2>StandUp</h2>
+		    <ul class="checklist">
+		      <li>
+		        <input type="checkbox" id="goal1" checked/>
+		        <label for="goal1">JS Syntax</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal2" checked/>
+		        <label for="goal2">Development Planning</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal3"/>
+		        <label for="goal3">Common Conditionals</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal4"/>
+		        <label for="goal4">Making It Work</label>
+		      </li>
+		    </ul>
+		  </section>
+
+		  <section data-markdown>## It Depends
+		    We’ve reviewed some simple functions that printed on the console or popped up on the screen. But, what if you were only supposed to print if the name the person entered is longer than 2 characters?
+		  </section>
+
+		  <section data-markdown>## If, Else, Else If
+		    The keyword **if** is used to evaluate if a condition is true. If it is then the code inside it will be executed.
+		    **else if** is used to add another conditional to be evaluated for true. If it is true then the code inside will be executed.
+		    **else** is used to execute code when the previous if condition is false. If it is false then the code inside will be executed.
+
+		    http://www.w3schools.com/jsref/jsref_if.asp
+		  </section>
+
+		  <section data-markdown>## Five Minutes of Struggle
+		    Update the onclick2.js file to only add the name to the page if the user entered text greater than 2 characters.
+
+		    Hint: http://www.w3schools.com/js/js_string_methods.asp
+
+		  </section>
+
+		  <section data-markdown>## Switch
+		    Sometimes you have to evaluate a number of conditions for one function. In times like those, instead of if..else if… else if… else if… else, you can use a switch statement.
+
+		    **switch** evaluates if one or more multiple conditions are true. If so, the code inside the block will be executed.
+		  </section>
+		  <section data-markdown>
+		    What is this function doing?
+
+		    ```javascript
+		    Function favoriteColor(color){
+		      switch(color){
+		        case “blue”:
+		        document.body.style.backgroundColor = “blue”;
+		        break; //this stops the next case from being evaluated.
+		        case “red”:
+		        document.body.style.backgroundColor = “red”;
+		        Break;
+		        case “yellow”:
+		        document.body.style.backgroundColor = “yellow”;
+		        break;
+		      }
+		    }```
+
+		    When color = blue, what happens?
+
+		    Cite: http://www.w3schools.com/jsref/jsref_switch.asp
+
+		  </section>
+
+		  <section>
+		    <h2>Huddle</h2>
+		    <ul class="checklist">
+		      <li>
+		        <input type="checkbox" id="goal1" checked/>
+		        <label for="goal1">JS Syntax</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal2" checked/>
+		        <label for="goal2">Development Planning</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal3" checked/>
+		        <label for="goal3">Common Conditionals</label>
+		      </li>
+		      <li>
+		        <input type="checkbox" id="goal4"/>
+		        <label for="goal4">Making It Work</label>
+		      </li>
+		    </ul>
+		  </section>
+
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true }
+		]
+	});
+
+	Reveal.configure({ slideNumber: 'c/t' });
+
+	</script>
+
+</body>
+</html>
