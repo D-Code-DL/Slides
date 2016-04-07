@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator Example</title>
+  <script>
+  var operator
+  var firstNumber;
+
+   function startCalc(){
+     operation = prompt("Enter an operator");
+     firstNumber = prompt("Enter a number");
+     secondNumber = prompt("Enter another number");
+     calculateNumbers(operation, firstNumber, secondNumber);
+   }
+
+   function calculateNumbers(operator, firstNumber, secondNumber){
+     var x = parseInt(firstNumber);
+     var y = parseInt(secondNumber);
+     switch(operator){
+       case "+":
+       var answer = addNumbers(x, y);
+       displayAnswer(answer);
+       break;
+       case "-":
+       break;
+       case "*":
+       break;
+       case "/":
+       break;
+       default:
+       break;
+     }
+   }
+
+   function addNumbers(x, y){
+     return x + y;
+   }
+
+   function subtractNumbers(x, y){
+
+   }
+
+   function multiplyNumbers(x, y){
+
+   }
+
+   function divideNumbers(x, y){
+
+   }
+
+   function displayAnswer(answer){
+     alert("The answer is " + answer);
+   }
+
+  </script>
+  <body>
+    <h1> Simple Calculator Example</h1>
+    <button onclick="startCalc()">Start Calculator</button>
+  </body>
+  </html>
