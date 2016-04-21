@@ -53,28 +53,28 @@
 					<h2>Goals</h2>
 					<ul class="checklist">
 						<li>
-							<input type="checkbox" id="goal1"/>
+							<input type="checkbox" id="goal1" />
 							<label for="goal1">What are control structures?</label>
 						</li>
 						<li>
-							<input type="checkbox" id="goal2"/>
+							<input type="checkbox" id="goal2" />
 							<label for="goal2">If(-Else) Statement</label>
 						</li>
 						<li>
-							<input type="checkbox" id="goal3"/>
-							<label for="goal3">For Loop</label>
+							<input type="checkbox" id="goal3" />
+							<label for="goal3">Switch</label>
 						</li>
 						<li>
-							<input type="checkbox" id="goal4"/>
-							<label for="goal4">While Loop</label>
+							<input type="checkbox" id="goal4" />
+							<label for="goal4">For Loop</label>
 						</li>
 						<li>
-							<input type="checkbox" id="goal5"/>
-							<label for="goal5">Do-While Loop</label>
+							<input type="checkbox" id="goal5" />
+							<label for="goal5">While Loop</label>
 						</li>
 						<li>
-							<input type="checkbox" id="goal6"/>
-							<label for="goal6">Switch</label>
+							<input type="checkbox" id="goal6" />
+							<label for="goal6">Do-While Loop</label>
 						</li>
 					</ul>
 				</section>
@@ -195,24 +195,24 @@
 						<label for="goal1">What are control structures?</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal2"/>
+						<input type="checkbox" id="goal2" />
 						<label for="goal2">If(-Else) Statement</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal3"/>
-						<label for="goal3">For Loop</label>
+						<input type="checkbox" id="goal3" />
+						<label for="goal3">Switch</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal4"/>
-						<label for="goal4">While Loop</label>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">For Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal5"/>
-						<label for="goal5">Do-While Loop</label>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">While Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal6"/>
-						<label for="goal6">Switch</label>
+						<input type="checkbox" id="goal6" />
+						<label for="goal6">Do-While Loop</label>
 					</li>
 				</ul>
 			</section>
@@ -278,20 +278,106 @@
 						<label for="goal2">If(-Else) Statement</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal3"/>
-						<label for="goal3">For Loop</label>
+						<input type="checkbox" id="goal3" />
+						<label for="goal3">Switch</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal4"/>
-						<label for="goal4">While Loop</label>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">For Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal5"/>
-						<label for="goal5">Do-While Loop</label>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">While Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal6"/>
-						<label for="goal6">Switch</label>
+						<input type="checkbox" id="goal6" />
+						<label for="goal6">Do-While Loop</label>
+					</li>
+				</ul>
+			</section>
+
+			<section data-markdown>
+				## Switch (Does anyone know that Will Smith song?)
+			</section>
+
+			<section>
+				<h2>Switch</h2>
+				<section data-markdown>
+					```javascript
+					var color = "green";
+					switch (color) {
+						case "green":
+							speed = 35;
+							break;
+						case "yellow":
+							speed = 45;
+							break;
+						case "red":
+							speed = 0;
+							break;
+						default:
+							speed = 10;
+					}
+					```
+					</section>
+			</section>
+
+			<section data-markdown>
+				## Switch
+				* Allows for multiple options in cleaner way than if-else-else-else-...
+				* Condition would normally not be defined right above the switch (that's not too imaginative)
+			</section>
+
+			<section data-markdown>
+				## What about break; and default: ?
+				* break; stops execution of the code in the blocks
+				  * The last case (or default, if it's last) do not need to end with break;
+				* default: is used when the condition does not match the switch statement cases
+			</section>
+
+			<section>
+				<h2>Try it yourself!</h2>
+				<p>Create your own switch statement.</p>
+			</section>
+
+			<section data-markdown>
+				## Open the simple_calc_example.html
+				* Try it out
+				* Now make the other operations work using the function stubs provided
+				* Add comments about how you would iterate on this web page to make it better
+			</section>
+
+			<section data-markdown>
+				## Open machineOps.html
+				* Add javascript to complete the challenges in each div
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked/>
+						<label for="goal1">What are control structures?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">If(-Else) Statement</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Switch</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">For Loop</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">While Loop</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal6" />
+						<label for="goal6">Do-While Loop</label>
 					</li>
 				</ul>
 			</section>
@@ -369,19 +455,19 @@
 					</li>
 					<li>
 						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">For Loop</label>
+						<label for="goal3">Switch</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal4"/>
-						<label for="goal4">While Loop</label>
+						<input type="checkbox" id="goal4" checked/>
+						<label for="goal4">For Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal5"/>
-						<label for="goal5">Do-While Loop</label>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">While Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal6"/>
-						<label for="goal6">Switch</label>
+						<input type="checkbox" id="goal6" />
+						<label for="goal6">Do-While Loop</label>
 					</li>
 				</ul>
 			</section>
@@ -428,19 +514,19 @@
 					</li>
 					<li>
 						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">For Loop</label>
+						<label for="goal3">Switch</label>
 					</li>
 					<li>
 						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">While Loop</label>
+						<label for="goal4">For Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal5"/>
-						<label for="goal5">Do-While Loop</label>
+						<input type="checkbox" id="goal5" checked/>
+						<label for="goal5">While Loop</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal6"/>
-						<label for="goal6">Switch</label>
+						<input type="checkbox" id="goal6" />
+						<label for="goal6">Do-While Loop</label>
 					</li>
 				</ul>
 			</section>
@@ -474,92 +560,6 @@
 			</section>
 
 			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" checked/>
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" checked/>
-						<label for="goal5">Do-While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6"/>
-						<label for="goal6">Switch</label>
-					</li>
-				</ul>
-			</section>
-
-			<section data-markdown>
-				## Switch (Does anyone know that Will Smith song?)
-			</section>
-
-			<section>
-				<h2>Switch</h2>
-				<section data-markdown>
-					```javascript
-					var color = "green";
-					switch (color) {
-						case "green":
-							speed = 35;
-							break;
-						case "yellow":
-							speed = 45;
-							break;
-						case "red":
-							speed = 0;
-							break;
-						default:
-							speed = 10;
-					}
-					```
-					</section>
-			</section>
-
-			<section data-markdown>
-				## Switch
-				* Allows for multiple options in cleaner way than if-else-else-else-...
-				* Condition would normally not be defined right above the switch (that's not too imaginative)
-			</section>
-
-			<section data-markdown>
-				## What about break; and default: ?
-				* break; stops execution of the code in the blocks
-				  * The last case (or default, if it's last) do not need to end with break;
-				* default: is used when the condition does not match the switch statement cases
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Create your own switch statement.</p>
-			</section>
-
-			<section data-markdown>
-				## Open the simple_calc_example.html
-				* Try it out
-				* Now make the other operations work using the function stubs provided
-				* Add comments about how you would iterate on this web page to make it better
-			</section>
-
-			<section data-markdown>
-				## Open machineOps.html
-				* Add javascript to complete the challenges in each div
-			</section>
-
-			<section>
 				<h2>And Now We're Done</h2>
 				<ul class="checklist">
 					<li>
@@ -572,26 +572,23 @@
 					</li>
 					<li>
 						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">For Loop</label>
+						<label for="goal3">Switch</label>
 					</li>
 					<li>
 						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">While Loop</label>
+						<label for="goal4">For Loop</label>
 					</li>
 					<li>
 						<input type="checkbox" id="goal5" checked/>
-						<label for="goal5">Do-While Loop</label>
+						<label for="goal5">While Loop</label>
 					</li>
 					<li>
 						<input type="checkbox" id="goal6" checked/>
-						<label for="goal6">Switch</label>
+						<label for="goal6">Do-While Loop</label>
 					</li>
 				</ul>
 				<p text-align="right">At least...by our definition of done.</p>
 			</section>
-
-
-
 
 
 			</div>
