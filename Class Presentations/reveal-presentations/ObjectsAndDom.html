@@ -239,410 +239,93 @@
 				</section>
 
 				<section>
-					<h2>What are control structures?</h2>
+					<h2>What are objects?</h2>
 				</section>
 
 			<section>
-				<h2>Control Structures</h2>
-				<p>"A <em>control structure</em> is a block of programming that analyzes
-					variables and chooses a direction in which to go based on given parameters."
-					-Wikiversity </p>
-				<p> You might say it's a block of code that makes a decision.</p>
+				<h2>Objects</h2>
+				<p>"A collection of named values"</p>
+				<p>"Variables containing variables"</p>
+				<p>"The building blocks of JavaScript"</p>
+				<p>(source: W3Schools)</p>
 			</section>
 
 			<section>
-				<h2>Control Structures</h2>
-				<p>Depending on how they're written, control structures can save time
-				by telling the computer to do something more efficiently. </p>
+				<p>We use objects to store and access information.
+					They are a way to represent data.
+				We can even use them to represent real life objects.</p>
 			</section>
 
 			<section>
-				<h2> You're already familiar with things like control structures... </h2>
-			</section>
-
-			<section data-background="../presentation-images/controlstructures/trafficlight-inline.jpg">
-			</section>
-
-			<section data-background="../presentation-images/controlstructures/musicalchairs.jpg">
+				<p>We're going to create a representative of an object the same way
+					 it's done in JavaScript. To help us, we have a special guest...</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/Florida_Box_Turtle_Digon3a.jpg"
+				width="400" height="300">
+				<p class="fragment">Kelly, the common box turtle!</p>
 			</section>
 
 			<section>
-				<p>Now when I say hey, you say ha! Hey!...</p>
-				<iframe width="854" height="480" src="https://www.youtube.com/embed/qG9ZWUitFik" frameborder="0" allowfullscreen></iframe>
+				<p>Remember when we talked about properties and values? JavaScript objects
+					have those too, and so does Kelly.</p>
+					<ol>
+						<li>weight: 2.4</li>
+						<li>gender: female</li>
+						<li>...</li>
+					</ol>
 			</section>
 
+			<section>
+				<img class="fragment" src="../presentation-images/objectsanddom/Florida_Box_Turtle_Digon3a.jpg"
+				width="400" height="300">
+				<p class="fragment"> Take 60 seconds to come up with as many other
+						properties as you can.</p>
+				<p class="fragment"> Ready? GO!</p>
+			</section>
 
 			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" />
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" />
-						<label for="goal3">Switch</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" />
-						<label for="goal4">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" />
-						<label for="goal5">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6" />
-						<label for="goal6">Do-While Loop</label>
-					</li>
-				</ul>
+				<p>Now, how do we create Kelly with these properties?</p>
 			</section>
 
 			<section data-markdown>
-				## If(-Else) Statement
+				```javascript
+				var kelly = {
+					species: "common box turtle",
+					weight: 2.4,
+					gender: female,
+					quote: "I'll get there when I get there"
+				}
+				```
+				(You can see how this is a collection of variables.)
 			</section>
 
-			<section>
-				<h2>If Statement</h2>
-				<section data-markdown>
-					```javascript
-					if (totalPoints > 99) {
-						congratulateWinner();
-					}
-					```
+				<section>
+					<section>
+						<h2>There are two ways to access information about Kelly:</h2>
+						<h3>(scroll down)</h3>
 					</section>
-			</section>
-
-			<section data-markdown>
-				## If Statement
-				* Evaluates (checks) a condition
-				* If the condition is true, the following block is executed
-			</section>
-
-			<section>
-				<h2>If-Else Statement</h2>
-				<section data-markdown>
-					```javascript
-					if (gradeLevel === "Senior") {
-						sayAlmostDone();
-					} else {
-						sayStayInSchool();
-					}
-					```
+					<section>
+						<p>1. Using periods (dot notation).</p>
 					</section>
-			</section>
-
-			<section data-markdown>
-				## If-Else Statement
-				* Evaluates (checks) a condition
-				* If the condition is true, executes the next block of code
-				* Executes a different block if the condition is false
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Make an alert statement pop up when a particular condition is met.</p>
-				<aside class="notes">Good way to start: define a variable first, and
-					use the variable in the if-statement's condition
-				</aside>
-			</section>
-
-			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" checked/>
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" />
-						<label for="goal3">Switch</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" />
-						<label for="goal4">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" />
-						<label for="goal5">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6" />
-						<label for="goal6">Do-While Loop</label>
-					</li>
-				</ul>
-			</section>
-
-			<section data-markdown>
-				## Switch (Does anyone know that Will Smith song?)
-			</section>
-
-			<section>
-				<h2>Switch</h2>
-				<section data-markdown>
-					```javascript
-					var color = "green";
-					switch (color) {
-						case "green":
-							speed = 35;
-							break;
-						case "yellow":
-							speed = 45;
-							break;
-						case "red":
-							speed = 0;
-							break;
-						default:
-							speed = 10;
-					}
-					```
+					<section data-markdown>
+						```javascript
+						var text = kelly.species;
+						```
 					</section>
-			</section>
-
-			<section data-markdown>
-				## Switch
-				* Allows for multiple options in cleaner way than if-else-else-else-...
-				* Condition would normally not be defined right above the switch (that's not too imaginative)
-			</section>
-
-			<section data-markdown>
-				## What about break; and default: ?
-				* break; stops execution of the code in the blocks
-				  * The last case (or default, if it's last) do not need to end with break;
-				* default: is used when the condition does not match the switch statement cases
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Create your own switch statement.</p>
-			</section>
-
-			<section data-markdown>
-				## Open the simple_calc_example.html
-				* Try it out
-				* Now make the other operations work using the function stubs provided
-				* Add comments about how you would iterate on this web page to make it better
-			</section>
-
-			<section data-markdown>
-				## Open machineOps.html
-				* Add javascript to complete the challenges in each div
-			</section>
-
-			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" checked/>
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">Switch</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" />
-						<label for="goal4">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" />
-						<label for="goal5">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6" />
-						<label for="goal6">Do-While Loop</label>
-					</li>
-				</ul>
-			</section>
-
-			<section data-markdown>
-				## Loop-de-loop
-			</section>
-
-			<section>
-				<h2>For Loop</h2>
-				<section data-markdown>
-					```javascript
-					for (i=0; i<6; i++) {
-						changeText("This is time number " + i)
-					}
-					```
+					<section>
+						<p>2. Using brackets (bracket notation).</p>
 					</section>
-			</section>
-
-			<section data-markdown>
-				## For Loop
-				* initialization: the counter variable is initialized at this value.
-					```javascript
-					for (i=0; i<6; i++) {
-						changeText("This is time number " + i)
-					}
-					```
-			</section>
-
-			<section data-markdown>
-				## For Loop
-				* condition: the for-loop keeps running until this becomes false.
-					```javascript
-					for (i=0; i<6; i++) {
-						changeText("This is time number " + i);
-					}
-					```
-			</section>
-
-			<section>
-				<h2>A Note on Infinite Loops</h2>
-				<ul>
-					<li>They occur in loops when the condition is never false.</li>
-					<li>They lead to the code running and running until your browser runs out of memory, which will break your script.</li>
-					<li>They are very bad. Avoid them by checking your conditions carefully.</li>
-			</section>
-
-			<section data-markdown>
-				## For Loop
-				* update: After each loop, the counter variable is changed in this way.
-					* "++" means incremented by 1. For example, if i was 2, it becomes 3.
-
-					```javascript
-					for (i=0; i<6; i++) {
-						changeText("This is time number " + i)
-					}
-					```
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Use a for-loop to make some lines of text appear on your page.</p>
-			</section>
-
-			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" checked/>
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">Switch</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" />
-						<label for="goal5">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6" />
-						<label for="goal6">Do-While Loop</label>
-					</li>
-				</ul>
-			</section>
-
-			<section data-markdown>
-				## In a Little While...
-			</section>
-
-			<section>
-				<h2>While Loop</h2>
-				<section data-markdown>
-					```javascript
-					var i = 0;
-					while (i<6) {
-						changeText("This is time number " + i)
-						i++;
-					}
-					```
+					<section data-markdown>
+						```javascript
+						var text = kelly[species];
+						```
 					</section>
-			</section>
-
-			<section data-markdown>
-				## While Loop
-				* Great way to keep executing a block of code until something changes.
-				* Make sure that the condition can eventually change, though
-				  * Increase the counter variable within the block (i++)
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Change the for-loop you created into a while loop.</p>
-			</section>
-
-			<section>
-				<h2>Goals</h2>
-				<ul class="checklist">
-					<li>
-						<input type="checkbox" id="goal1" checked/>
-						<label for="goal1">What are control structures?</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal2" checked/>
-						<label for="goal2">If(-Else) Statement</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal3" checked/>
-						<label for="goal3">Switch</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">For Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal5" checked/>
-						<label for="goal5">While Loop</label>
-					</li>
-					<li>
-						<input type="checkbox" id="goal6" />
-						<label for="goal6">Do-While Loop</label>
-					</li>
-				</ul>
-			</section>
-
-			<section data-markdown>
-				## Remix
-			</section>
-
-			<section>
-				<h2>Do-While Loop</h2>
-				<section data-markdown>
-					```javascript
-					var i = 0;
-					do {
-						changeText("This is time number " + i)
-						i++;
-					} while (i<6)
-					```
+					<section>
+						<p>The main difference is that you can only use dot notation when
+							your variable has that specific name, whereas what you put into
+							the bracket will be evaluated (so a mathematical expression
+							could work, for example).</p>
 					</section>
-			</section>
-
-			<section data-markdown>
-				## Do-While Loop
-				* Doesn't seem too different, huh?
-				* The main difference is that a do-while loop always executes the block at least once.
-			</section>
-
-			<section>
-				<h2>Try it yourself!</h2>
-				<p>Create a do-while loop that only executes the code block once.</p>
-			</section>
+				</section>
 
 			<section>
 				<h2>And Now We're Done</h2>
