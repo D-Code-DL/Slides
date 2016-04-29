@@ -55,27 +55,19 @@
 					<ul class="checklist">
 						<li>
 							<input type="checkbox" id="goal1" />
-							<label for="goal1">What are control structures?</label>
+							<label for="goal1">What are objects?</label>
 						</li>
 						<li>
 							<input type="checkbox" id="goal2" />
-							<label for="goal2">If(-Else) Statement</label>
+							<label for="goal2">Built-in Objects</label>
 						</li>
 						<li>
 							<input type="checkbox" id="goal3" />
-							<label for="goal3">Switch</label>
+							<label for="goal3">Creating Objects</label>
 						</li>
 						<li>
 							<input type="checkbox" id="goal4" />
-							<label for="goal4">For Loop</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal5" />
-							<label for="goal5">While Loop</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal6" />
-							<label for="goal6">Do-While Loop</label>
+							<label for="goal4">The Document Object Model</label>
 						</li>
 					</ul>
 				</section>
@@ -89,70 +81,162 @@
 						```
 					</section>
 					<section>
-						<p> What is an operator? What are some examples?</p>
+						<p> What is a control structure? (Feel free to use your own words.)</p>
 					</section>
 					<section>
-						<p> An operator is a symbol used to assign or compare values and complete arithmetic</p>
-						<p> Examples:  +, -, *, /, % </p>
+						<p>"A <em>control structure</em> is a block of programming that analyzes
+							variables and chooses a direction in which to go based on given parameters."
+							-Wikiversity </p>
 					</section>
 					<section>
-						<p> What is the % operator?</p>
+						<p> What is an if statement? </p>
 					</section>
 					<section>
-						<p> Modulus - calculates the remainder from division</p>
+						<p> A control structure that checks if a given boolean variable
+						or expression is true</p>
 					</section>
 					<section>
-						<p> What does the ++ operator do? And what is it called?</p>
+						<p> How would you write an if statement that increments i if i is less than 6? </p>
+					</section>
+					<section data-markdown>
+						```javascript
+						if(i < 6) {
+							i++;
+						}
+						```
 					</section>
 					<section>
-						<p> The increment operator increases a variable's value by 1. </p>
+						<p> How is an if-else statement different from an if statement? </p>
 					</section>
 					<section>
-						<p> What does the -- operator do? And what is it called?</p>
+						<p> An if-else statement provides an instruction for if the condition
+						is false</p>
 					</section>
 					<section>
-						<p> The decrement operator decreases a variable's value by 1. </p>
+						<p> How would you write a statement that increments i if i is less than 6, but decrements it otherwise? </p>
+					</section>
+					<section data-markdown>
+						```javascript
+						if(i < 6) {
+							i++;
+						} else {
+							i--;
+						}
+						```
 					</section>
 					<section>
-						<p> What is an expression in JavaScript? (You can give a definition or an example)</p>
+						<p> What is a switch? </p>
 					</section>
 					<section>
-						<p> A combination of variables, values, and operators that produces a value. </p>
-						<p> var myAge = 2 + 23; </p>
+						<p> A switch is a control structure that allows the value of a variable to change
+						the flow of execution</p>
 					</section>
 					<section>
-						<p> What should you put at the end of every expression in JavaScript?</p>
+						<p> What does a break statement do in a switch statement? </p>
 					</section>
 					<section>
-						<p> A semicolon (;) </p>
+						<p> It prevents the statements in the switch block from "falling
+							 through" (all just being executed in sequence) </p>
 					</section>
 					<section>
-						<p> How do you assign a value to a variable? (What if we wanted to make height 20, for example?)</p>
+						<p> What is the default label in a switch statement for? </p>
 					</section>
 					<section>
-						<p> height = 20;</p>
-						<p> var height = 20;  (if the variable does not exist yet)</p>
+						<p> The default label creates an option for when the variable does not match any of the cases.</p>
 					</section>
 					<section>
-						<p> What are reserved words? </p>
+						<p> Write a switch statement for a traffic light. </p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var color = "green";
+						switch (color) {
+							case "green":
+								speed = 35;
+								break;
+							case "yellow":
+								speed = 45;
+								break;
+							case "red":
+								speed = 0;
+								break;
+							default:
+								speed = 10;
+						}
+						```
+						</section>
+					<section>
+						<p> What is a for loop?</p>
 					</section>
 					<section>
-						<p> Words you shouldn't use to name functions, variables, or objects because they have
-						special meaning in JavaScript. </p>
+						<p> A for loop is a control structure that allows a statement to be
+							 repeated until a certain condition is met.</p>
 					</section>
 					<section>
-						<p> What kinds of operators are these? What do they do? </p>
-						<h2> &amp;&amp;, ||, ! </h2>
+						<p> Let's write a for-loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						for(var i=0; i<10; i++) {
+							clap();
+						}
+						```
 					</section>
 					<section>
-						<p>They're called logical operators.</p>
-						<p class="fragment">&amp;&amp;: evaluates if both are true (color===red &amp;&amp; shape===circle) </p>
-						<p class="fragment">||: evaluates if either one is true (age >= 17 || withGuardian===true) </p>
-						<p class="fragment"> ! : used to evaluate the negative of a condition. </p>
-						<p class="fragment">	!color===red will return true for color===blue, color===green, etc. </p>
+						<p> What is a while loop?</p>
+					</section>
+					<section>
+						<p> A while loop is a control structure that allows a statement to be
+							 repeated while a certain condition is under effect. The condition
+						 is checked at the beginning of each loop.</p>
+					</section>
+					<section>
+						<p> Let's write a while-loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var i = 0;
+						while(i<10) {
+							clap();
+							i++;
+						}
+						```
+					</section>
+					<section>
+						<p> What is a do-while loop? (How does it differ from a while loop?)</p>
+					</section>
+					<section>
+						<p> A do-while loop is a control structure that allows a statement to be
+							 repeated while a certain condition is under effect. However, the code within
+						 a do-while looop is always executed at least once, and the condition is
+						 checked at the end of each loop.</p>
+					</section>
+					<section>
+						<p> Let's write a do-while loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var i = 0;
+						do {
+							clap();
+							i++;
+						} while (i < 11);
+						```
+						or
+						```javascript
+						var i = 1;
+						do {
+							clap();
+							i++;
+						} while (i <= 10);
+						```
+						(many different ways to do this)
 					</section>
 				</section>
-
 
 				<section>
 					<h2>What are control structures?</h2>
