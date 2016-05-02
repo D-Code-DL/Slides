@@ -261,6 +261,40 @@
 			</section>
 
 			<section>
+				<h2>Mea Culpa</h2>
+				<p>There's a very important type of object that you need to know about,
+					but we won't go into much detail on it today. It's called an <em>array</em>,
+					and it's a fundamental coding concept.</p>
+			</section>
+
+			<section>
+				<h2>Things You Must Know About Arrays</h2>
+				<ul>
+					<li>They store many values, called <em>elements</em>, in a single variable.</li>
+					<li>They can hold data of any type: numbers, strings, booleans, etc. </li>
+					<li>They have indices: numbers which refer to each value.</li>
+					<li class="fragment">var destiny = ["Beyoncé", "Kelly", "LaTavia", "LeToya"];</li>
+					<li class="fragment">Beyoncé has an index of 0, Kelly's is 1, and so on.</li>
+					<li class="fragment">You access elements of an array by using the array name and brackets.</li>
+
+				</ul>
+			</section>
+
+			<section>
+				<p>var destiny = ["Beyoncé", "Kelly", "LaTavia", "LeToya"];</p>
+				<p class="fragment"> What is the value of destiny[2]? </p>
+				<p class="fragment">var numbers = [21, 66, 33, 55, 2];</p>
+				<p class="fragment"> What is the value of numbers[1]? </p>
+				<p class="fragment">var bools = [true, true, false, true, false];</p>
+				<p class="fragment"> How about bools[5]? </p>
+			</section>
+
+			<section>
+				<img src="../presentation-images/objectsanddom/regschedprog.jpg"
+				width="480" height="360">
+			</section>
+
+			<section>
 				<p>We're going to create a representative of an object the same way
 					 it's done in JavaScript. To help us, we have a special guest...</p>
 				<img class="fragment" src="../presentation-images/objectsanddom/Florida_Box_Turtle_Digon3a.jpg"
@@ -322,6 +356,7 @@
 			</section>
 
 			<section data-markdown>
+				We'll focus on one way to make objects: using <strong>object literals</strong>.
 				```javascript
 				var kelly = {
 					species: "common box turtle",
