@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Objects and Document Object Model</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Kyle Ofori and Brandy Foster">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Objects and the Document Object Model (DOM)</h1>
+					<h2>(05/02/2016)</h2>
+					<h3>D-Code</h3>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1"  />
+							<label for="goal1">What are objects?</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" />
+							<label for="goal2">Creating Objects</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal3" />
+							<label for="goal3">Methods</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal4" />
+							<label for="goal4">Browser Object Model</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal5" />
+							<label for="goal5">The Document Object Model</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<section data-markdown>
+						```javascript
+						try {
+							whatDoYouRemember();
+						}
+						```
+					</section>
+					<section>
+						<p> What is a control structure? (Feel free to use your own words.)</p>
+					</section>
+					<section>
+						<p>"A <em>control structure</em> is a block of programming that analyzes
+							variables and chooses a direction in which to go based on given parameters."
+							-Wikiversity </p>
+					</section>
+					<section>
+						<p> What is an if statement? </p>
+					</section>
+					<section>
+						<p> A control structure that checks if a given boolean variable
+						or expression is true</p>
+					</section>
+					<section>
+						<p> How would you write an if statement that increments i if i is less than 6? </p>
+					</section>
+					<section data-markdown>
+						```javascript
+						if(i < 6) {
+							i++;
+						}
+						```
+					</section>
+					<section>
+						<p> How is an if-else statement different from an if statement? </p>
+					</section>
+					<section>
+						<p> An if-else statement provides an instruction for if the condition
+						is false</p>
+					</section>
+					<section>
+						<p> How would you write a statement that increments i if i is less than 6, but decrements it otherwise? </p>
+					</section>
+					<section data-markdown>
+						```javascript
+						if(i < 6) {
+							i++;
+						} else {
+							i--;
+						}
+						```
+					</section>
+					<section>
+						<p> What is a switch? </p>
+					</section>
+					<section>
+						<p> A switch is a control structure that allows the value of a variable to change
+						the flow of execution</p>
+					</section>
+					<section>
+						<p> What does a break statement do in a switch statement? </p>
+					</section>
+					<section>
+						<p> It prevents the statements in the switch block from "falling
+							 through" (all just being executed in sequence) </p>
+					</section>
+					<section>
+						<p> What is the default label in a switch statement for? </p>
+					</section>
+					<section>
+						<p> The default label creates an option for when the variable does not match any of the cases.</p>
+					</section>
+					<section>
+						<p> Write a switch statement for a traffic light. </p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var color = "green";
+						switch (color) {
+							case "green":
+								speed = 35;
+								break;
+							case "yellow":
+								speed = 45;
+								break;
+							case "red":
+								speed = 0;
+								break;
+							default:
+								speed = 10;
+						}
+						```
+						</section>
+					<section>
+						<p> What is a for loop?</p>
+					</section>
+					<section>
+						<p> A for loop is a control structure that allows a statement to be
+							 repeated until a certain condition is met.</p>
+					</section>
+					<section>
+						<p> Let's write a for-loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						for(var i=0; i<10; i++) {
+							clap();
+						}
+						```
+					</section>
+					<section>
+						<p> What is a while loop?</p>
+					</section>
+					<section>
+						<p> A while loop is a control structure that allows a statement to be
+							 repeated while a certain condition is under effect. The condition
+						 is checked at the beginning of each loop.</p>
+					</section>
+					<section>
+						<p> Let's write a while-loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var i = 0;
+						while(i<10) {
+							clap();
+							i++;
+						}
+						```
+					</section>
+					<section>
+						<p> What is a do-while loop? (How does it differ from a while loop?)</p>
+					</section>
+					<section>
+						<p> A do-while loop is a control structure that allows a statement to be
+							 repeated while a certain condition is under effect. However, the code within
+						 a do-while looop is always executed at least once, and the condition is
+						 checked at the end of each loop.</p>
+					</section>
+					<section>
+						<p> Let's write a do-while loop that tells someone to clap ten times.</p>
+					</section>
+					<section data-markdown>
+						(Example)
+						```javascript
+						var i = 0;
+						do {
+							clap();
+							i++;
+						} while (i < 11);
+						```
+						or
+						```javascript
+						var i = 1;
+						do {
+							clap();
+							i++;
+						} while (i <= 10);
+						```
+						(many different ways to do this)
+					</section>
+				</section>
+
+				<section>
+					<h2>What are objects?</h2>
+				</section>
+
+			<section>
+				<h2>Objects</h2>
+				<p>"A collection of named values"</p>
+				<p>"Variables containing variables"</p>
+				<p>"The building blocks of JavaScript"</p>
+				<p>(source: W3Schools)</p>
+			</section>
+
+			<section>
+				<p>We use objects to store and access information.
+					They are a way to represent data.
+				We can even use them to represent real life objects.</p>
+			</section>
+
+			<section>
+				<h2>Mea Culpa</h2>
+				<p>There's a very important type of object that you need to know about,
+					but we won't go into much detail on it today. It's called an <em>array</em>,
+					and it's a fundamental coding concept.</p>
+			</section>
+
+			<section>
+				<h2>Things You Must Know About Arrays</h2>
+				<ul>
+					<li>They store many values, called <em>elements</em>, in a single variable.</li>
+					<li>They can hold data of any type: numbers, strings, booleans, etc. </li>
+					<li>They have indices: numbers which refer to each value.</li>
+					<li class="fragment">var destiny = ["Beyoncé", "Kelly", "LaTavia", "LeToya"];</li>
+					<li class="fragment">Beyoncé has an index of 0, Kelly's is 1, and so on.</li>
+					<li class="fragment">You access elements of an array by using the array name and brackets.</li>
+
+				</ul>
+			</section>
+
+			<section>
+				<p>var destiny = ["Beyoncé", "Kelly", "LaTavia", "LeToya"];</p>
+				<p class="fragment"> What is the value of destiny[2]? </p>
+				<p class="fragment">var numbers = [21, 66, 33, 55, 2];</p>
+				<p class="fragment"> What is the value of numbers[1]? </p>
+				<p class="fragment">var bools = [true, true, false, true, false];</p>
+				<p class="fragment"> How about bools[5]? </p>
+			</section>
+
+			<section>
+				<img src="../presentation-images/objectsanddom/regschedprog.jpg"
+				width="480" height="360">
+			</section>
+
+			<section>
+				<p>We're going to create a representative of an object the same way
+					 it's done in JavaScript. To help us, we have a special guest...</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/Florida_Box_Turtle_Digon3a.jpg"
+				width="400" height="300">
+				<p class="fragment">Kelly, the common box turtle!</p>
+			</section>
+
+			<section>
+				<p>Remember when we talked about properties and values? JavaScript objects
+					have those too, and so does Kelly.</p>
+					<ol>
+						<li>weight: 2.4</li>
+						<li>gender: female</li>
+						<li>...</li>
+					</ol>
+			</section>
+
+			<section>
+				<img class="fragment" src="../presentation-images/objectsanddom/Florida_Box_Turtle_Digon3a.jpg"
+				width="400" height="300">
+				<p class="fragment"> Take 60 seconds to come up with as many other
+						properties as you can.</p>
+				<p class="fragment"> Ready? GO!</p>
+			</section>
+
+			<section>
+				<p>Now, how do we create Kelly with these properties?</p>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2"/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3"/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4"/>
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5"/>
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Creating Objects</h2>
+				<h3>feat. Kelly the Box Turtle</h3>
+			</section>
+
+			<section data-markdown>
+				We'll focus on one way to make objects: using <strong>object literals</strong>.
+				```javascript
+				var kelly = {
+					species: "common box turtle",
+					weight: 2.4,
+					gender: female,
+					quote: "I'll get there when I get there"
+				}
+				```
+				(You can see how this is a collection of variables.)
+			</section>
+
+			<section>
+				<section>
+					<h2>There are two ways to access information about Kelly:</h2>
+					<h3>(scroll down)</h3>
+				</section>
+				<section>
+					<p>1. Using periods (dot notation).</p>
+				</section>
+				<section data-markdown>
+					```javascript
+					var text = kelly.species;
+					```
+				</section>
+				<section>
+					<p>2. Using brackets (bracket notation).</p>
+				</section>
+				<section data-markdown>
+					```javascript
+					var text = kelly["species"];
+					```
+				</section>
+				<section>
+					<p>The main difference is that you can only use dot notation when
+						your variable has that specific name, whereas what you put into
+						the bracket will be evaluated (so a mathematical expression
+						could work, for example).</p>
+				</section>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" />
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Methods</h2>
+			</section>
+
+			<section>
+				<p>Now, Kelly isn't just a statue of a turtle...she's the real thing.</p>
+				<p>That means she can do things! She can perform certain <em>functions</em>.</p>
+			</section>
+
+			<section>
+				<p>A property that contains a function of an object is also called a <strong>method</strong> of that object.</p>
+				<p>source: EloquentJavaScript.net (a long but good read)</p>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				var kelly = {
+					species: "common box turtle",
+					weight: 2.4,
+					position: 1,
+					gender: female,
+					walk: function() {position++;}
+				}
+				```
+				(You can see how this is a collection of variables.)
+			</section>
+
+			<section>
+				<p>To invoke a function, use the parentheses.
+					Otherwise, you will just get the function definition.</p>
+				<p>An example is provided in objectsAndDom1.html.</p>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				kelly.walk;
+				console.log(kelly.position);
+				}
+				```
+				Nothing will have happened. Kelly will remain where she was, at 1.
+			</section>
+
+			<section>
+				<p>Can you figure out how to make Kelly's position increase to 2?
+			</section>
+
+			<section data-markdown>
+				```javascript
+				kelly.walk();
+				console.log(kelly.position);
+				}
+				```
+				&lt;em&gt;Parentheses:&lt;/em&gt; On the screen, you will see that Kelly's position has increased to 2.
+			</section>
+
+			<section>
+				<h2>5 Minutes of Struggle</h2>
+				<p>Struggle 1: add a button that can be pressed to move Kelly forward.</p>
+				<p>Struggle 2: Give Kelly another attribute and a function. Then, add a button that
+					calls the function. Example:
+					rollOver(); which will say if Kelly is on her feet or on her shell.</p>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Some Objects Included</h2>
+			</section>
+
+			<section>
+				<h2>Browser Object Model</h2>
+				<p>Some variables in JavaScript refer to thing outside of the page contents
+					themselves, but still within the browser. You did not make these
+				  yourself as the programmer, but you would still need
+					access to them.</p>
+				<p>The examples we will look at here are part of the browser object model.</p>
+			</section>
+
+			<section>
+				<h2>Window object</h2>
+				<p>Represents an open window in a browser.</p>
+				<p>One to refer to the entire browser in which the webpage is located;
+					may be more if a webpage has frames (&lt;iframe&gt;) within it.</p>
+			</section>
+
+			<section>
+				<h2>Navigator object</h2>
+				<p>Contains information about the browser itself.</p>
+			</section>
+
+			<section>
+				<h2>History object</h2>
+				<p>Contains URLs visited by the browser.</p>
+				<p>Source: W3Schools</p>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked/>
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" checked/>
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>The DOM</h2>
+			</section>
+
+			<section>
+				<h2>Document-Object Model</h2>
+				<ul>
+					<li>As mentioned above, the document object model is a way of representing
+				the contents of a webpage as a JavaScript object.</li>
+					<li>The keyword <em>document</em> is used to get a reference to the webpage.</li>
+					<li>From there, you can reference individual variables by their id, or you
+					can retrieve a list of them by using tags or classes.</li>
+				</ul>
+			</section>
+
+			<section>
+				<p>Compare:</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/html_outline.png"
+				width="400" height="300">
+				<img class="fragment" src="../presentation-images/objectsanddom/html_diagram.png"
+				width="300" height="400">
+			</section>
+
+			<section>
+				<h2>How the DOM works</h2>
+				<ol>
+					<li>Browser retrieves HTML text from page</li>
+					<li>Browser parses (analyzes) text</li>
+					<li>Browser builds a model of the page, one that you can edit temporarily</li>
+				</ol>
+			</section>
+
+			<section>
+				<p>In objectsAndDom1.html, you can see an example of using the DOM when
+					 we use "document" to get the element with an ID of "position". </p>
+			</section>
+
+			<section>
+				<h2>Traversing the DOM</h2>
+				<p>Many think of the document object model as a tree-like structure.</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/pic_htmltree.gif"
+				width="300" height="400">
+			</section>
+
+			<section>
+				<h2>Traversing the DOM</h2>
+				<p>The <strong>node</strong> is the building block of the DOM. Everything in the HTML document is a node.</p>
+				<p>Every node has one parent.</p>
+				<p>A node can have its own children.</p>
+				<p>A node can have siblings--other nodes with the same parent. (This is sort of like a family tree.)</p>
+				<p>Source: W3Schools</p>
+			</section>
+
+			<section>
+				<p>You can access particular elements not just by getting their IDs, but also
+					by going through the DOM "tree".</p>
+				<p>Warning: A common mistake (Kyle has made it) is to think that an element node (title, h1, p, etc.)
+					can contain text. They don't. Instead, they contain <em>text nodes</em>
+					with some string as a value. (Explore objectsAndDom2.html to understand this.)</p>
+			</section>
+
+			<section>
+				<h2>And Now We're Done</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" checked/>
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" checked/>
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+				<p text-align="right">At least...by our definition of done.</p>
+			</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+
+		</script>
+
+	</body>
+</html>
