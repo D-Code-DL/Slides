@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kelly Example</title>
+</head>
+<body>
+  <p id=position>(This text will be in the console, but not on screen)</p>
+<script>
+var kelly = {
+  species: "common box turtle",
+  weight: 2.4,
+  position: 1,
+  gender: "female",
+  walk: function() {kelly.position++;}
+}
+
+var text = document.getElementById('position');
+console.log(text.innerHTML);
+console.log(navigator.appVersion);
+
+kelly.walk;
+text.innerHTML = kelly.position;
+
+</script>
+</body>
+</html>

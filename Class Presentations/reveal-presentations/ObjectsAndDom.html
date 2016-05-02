@@ -67,7 +67,7 @@
 						</li>
 						<li>
 							<input type="checkbox" id="goal4" />
-							<label for="goal4">Built-In Objects</label>
+							<label for="goal4">Browser Object Model</label>
 						</li>
 						<li>
 							<input type="checkbox" id="goal5" />
@@ -298,26 +298,26 @@
 						<label for="goal1">What are objects?</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal2" checked/>
+						<input type="checkbox" id="goal2"/>
 						<label for="goal2">Creating Objects</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal3" checked/>
+						<input type="checkbox" id="goal3"/>
 						<label for="goal3">Methods</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">Built-In Objects</label>
+						<input type="checkbox" id="goal4"/>
+						<label for="goal4">Browser Object Model</label>
 					</li>
 					<li>
-						<input type="checkbox" id="goal5" checked/>
+						<input type="checkbox" id="goal5"/>
 						<label for="goal5">The Document Object Model</label>
 					</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Creating Objects and Methods</h2>
+				<h2>Creating Objects</h2>
 				<h3>feat. Kelly the Box Turtle</h3>
 			</section>
 
@@ -333,110 +333,210 @@
 				(You can see how this is a collection of variables.)
 			</section>
 
+			<section>
 				<section>
-					<section>
-						<h2>There are two ways to access information about Kelly:</h2>
-						<h3>(scroll down)</h3>
-					</section>
-					<section>
-						<p>1. Using periods (dot notation).</p>
-					</section>
-					<section data-markdown>
-						```javascript
-						var text = kelly.species;
-						```
-					</section>
-					<section>
-						<p>2. Using brackets (bracket notation).</p>
-					</section>
-					<section data-markdown>
-						```javascript
-						var text = kelly[species];
-						```
-					</section>
-					<section>
-						<p>The main difference is that you can only use dot notation when
-							your variable has that specific name, whereas what you put into
-							the bracket will be evaluated (so a mathematical expression
-							could work, for example).</p>
-					</section>
+					<h2>There are two ways to access information about Kelly:</h2>
+					<h3>(scroll down)</h3>
 				</section>
-
 				<section>
-					<h2>Goals</h2>
-					<ul class="checklist">
-						<li>
-							<input type="checkbox" id="goal1" checked />
-							<label for="goal1">What are objects?</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal2" checked/>
-							<label for="goal2">Creating Objects</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal3" />
-							<label for="goal3">Methods</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal4" />
-							<label for="goal4">Built-In Objects</label>
-						</li>
-						<li>
-							<input type="checkbox" id="goal5" />
-							<label for="goal5">The Document Object Model</label>
-						</li>
-					</ul>
+					<p>1. Using periods (dot notation).</p>
 				</section>
-
-				<section>
-					<h2>Methods</h2>
-				</section>
-
-				<section>
-					<p>Now, Kelly isn't just a statue of a turtle...she's the real thing.</p>
-					<p>That means she can do things! She can perform certain <em>functions</em>.</p>
-				</section>
-
-				<section>
-					<p>A property that contains a function of an object is also called a <strong>method</strong> of that object.</p>
-					<p>source: EloquentJavaScript.net (a long but good read)</p>
-				</section>
-
 				<section data-markdown>
 					```javascript
-					var kelly = {
-						species: "common box turtle",
-						weight: 2.4,
-						position: 1,
-						gender: female,
-						walk: function() {position++;}
-					}
+					var text = kelly.species;
 					```
-					(You can see how this is a collection of variables.)
 				</section>
-
 				<section>
-					<p>To invoke a function, use the parentheses.
-						Otherwise, you will just get the function definition.</p>
+					<p>2. Using brackets (bracket notation).</p>
 				</section>
-
 				<section data-markdown>
 					```javascript
-					kelly.walk();
-					console.log(kelly.position);
-					}
+					var text = kelly[species];
 					```
-					&lt;em&gt;Parentheses:&lt;/em&gt; On the console, you will see that Kelly's position has increased to 2.
 				</section>
+				<section>
+					<p>The main difference is that you can only use dot notation when
+						your variable has that specific name, whereas what you put into
+						the bracket will be evaluated (so a mathematical expression
+						could work, for example).</p>
+				</section>
+			</section>
 
-				<section data-markdown>
-					```javascript
-					kelly.walk;
-					console.log(kelly.position);
-					}
-					```
-					&lt;em&gt;No parentheses:&lt;/em&gt; Nothing will have happened. Kelly will remain where she was, at 1.
-				</section>
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" />
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Methods</h2>
+			</section>
+
+			<section>
+				<p>Now, Kelly isn't just a statue of a turtle...she's the real thing.</p>
+				<p>That means she can do things! She can perform certain <em>functions</em>.</p>
+			</section>
+
+			<section>
+				<p>A property that contains a function of an object is also called a <strong>method</strong> of that object.</p>
+				<p>source: EloquentJavaScript.net (a long but good read)</p>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				var kelly = {
+					species: "common box turtle",
+					weight: 2.4,
+					position: 1,
+					gender: female,
+					walk: function() {position++;}
+				}
+				```
+				(You can see how this is a collection of variables.)
+			</section>
+
+			<section>
+				<p>To invoke a function, use the parentheses.
+					Otherwise, you will just get the function definition.</p>
+				<p>An example is provided in objectsAndDom1.html.</p>
+			</section>
+
+			<section data-markdown>
+				```javascript
+				kelly.walk();
+				console.log(kelly.position);
+				}
+				```
+				&lt;em&gt;Parentheses:&lt;/em&gt; On the screen, you will see that Kelly's position has increased to 2.
+			</section>
+
+			<section data-markdown>
+				```javascript
+				kelly.walk;
+				console.log(kelly.position);
+				}
+				```
+				&lt;em&gt;No parentheses:&lt;/em&gt; Nothing will have happened. Kelly will remain where she was, at 1.
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" />
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Some Objects Included</h2>
+			</section>
+
+			<section>
+				<h2>Browser Object Model</h2>
+				<p>Some variables in JavaScript refer to thing outside of the page contents
+					themselves, but still within the browser. You did not make these
+				  yourself as the programmer, but you would still need
+					access to them.</p>
+				<p>The examples we will look at here are part of the browser object model.</p>
+			</section>
+
+			<section>
+				<h2>Window object</h2>
+				<p>Represents an open window in a browser.</p>
+				<p>One to refer to the entire browser in which the webpage is located;
+					may be more if a webpage has frames (&lt;iframe&gt;) within it.</p>
+			</section>
+
+			<section>
+				<h2>Navigator object</h2>
+				<p>Contains information about the browser itself.</p>
+			</section>
+
+			<section>
+				<h2>History object</h2>
+				<p>Contains URLs visited by the browser.</p>
+				<p>Source: W3Schools</p>
+			</section>
+
+			<section>
+				<h2>Goals</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked/>
+						<label for="goal1">What are objects?</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" checked/>
+						<label for="goal2">Creating Objects</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal3" checked/>
+						<label for="goal3">Methods</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal4" checked/>
+						<label for="goal4">Browser Object Model</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal5" />
+						<label for="goal5">The Document Object Model</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>The DOM</h2>
+			</section>
+
+			<section>
+				<h2>Document-Object Model</h2>
+				<ol>
+					<li>As mentioned above, the document object model is a way of representing
+				the contents of a webpage as a JavaScript object.</li>
+					<li>The keyword <em>document</em> is used to get a reference to the webpage.</li>
+					<li>From there, you can reference individual variables by their id, or you
+					can retrieve a list of them by using tags or classes.</li>
+				</ol>
+			</section>
+
 
 			<section>
 				<h2>And Now We're Done</h2>
@@ -455,7 +555,7 @@
 					</li>
 					<li>
 						<input type="checkbox" id="goal4" checked/>
-						<label for="goal4">Built-In Objects</label>
+						<label for="goal4">Browser Object Model</label>
 					</li>
 					<li>
 						<input type="checkbox" id="goal5" checked/>
