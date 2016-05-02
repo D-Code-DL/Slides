@@ -423,6 +423,19 @@
 
 			<section data-markdown>
 				```javascript
+				kelly.walk;
+				console.log(kelly.position);
+				}
+				```
+				Nothing will have happened. Kelly will remain where she was, at 1.
+			</section>
+
+			<section>
+				<p>Can you figure out how to make Kelly's position increase to 2?
+			</section>
+
+			<section data-markdown>
+				```javascript
 				kelly.walk();
 				console.log(kelly.position);
 				}
@@ -430,14 +443,7 @@
 				&lt;em&gt;Parentheses:&lt;/em&gt; On the screen, you will see that Kelly's position has increased to 2.
 			</section>
 
-			<section data-markdown>
-				```javascript
-				kelly.walk;
-				console.log(kelly.position);
-				}
-				```
-				&lt;em&gt;No parentheses:&lt;/em&gt; Nothing will have happened. Kelly will remain where she was, at 1.
-			</section>
+
 
 			<section>
 				<h2>Goals</h2>
@@ -528,15 +534,60 @@
 
 			<section>
 				<h2>Document-Object Model</h2>
-				<ol>
+				<ul>
 					<li>As mentioned above, the document object model is a way of representing
 				the contents of a webpage as a JavaScript object.</li>
 					<li>The keyword <em>document</em> is used to get a reference to the webpage.</li>
 					<li>From there, you can reference individual variables by their id, or you
 					can retrieve a list of them by using tags or classes.</li>
+				</ul>
+			</section>
+
+			<section>
+				<p>Compare:</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/html_outline.png"
+				width="400" height="300">
+				<img class="fragment" src="../presentation-images/objectsanddom/html_diagram.png"
+				width="300" height="400">
+			</section>
+
+			<section>
+				<h2>How the DOM works</h2>
+				<ol>
+					<li>Browser retrieves HTML text from page</li>
+					<li>Browser parses (analyzes) text</li>
+					<li>Browser builds a model of the page, one that you can edit temporarily</li>
 				</ol>
 			</section>
 
+			<section>
+				<p>In objectsAndDom1.html, you can see an example of using the DOM when
+					 we use "document" to get the element with an ID of "position". </p>
+			</section>
+
+			<section>
+				<h2>Traversing the DOM</h2>
+				<p>Many think of the document object model as a tree-like structure.</p>
+				<img class="fragment" src="../presentation-images/objectsanddom/pic_htmltree.gif"
+				width="300" height="400">
+			</section>
+
+			<section>
+				<h2>Traversing the DOM</h2>
+				<p>The <strong>node</strong> is the building block of the DOM. Everything in the HTML document is a node.</p>
+				<p>Every node has one parent.</p>
+				<p>A node can have its own children.</p>
+				<p>A node can have siblings--other nodes with the same parent. (This is sort of like a family tree.)</p>
+				<p>Source: W3Schools</p>
+			</section>
+
+			<section>
+				<p>You can access particular elements not just by getting their IDs, but also
+					by going through the DOM "tree".</p>
+				<p>Warning: A common mistake (Kyle has made it) is to think that an element node (title, h1, p, etc.)
+					can contain text. They don't. Instead, they contain <em>text nodes</em>
+					with some string as a value. (Explore objectsAndDom2.html to understand this.)</p>
+			</section>
 
 			<section>
 				<h2>And Now We're Done</h2>

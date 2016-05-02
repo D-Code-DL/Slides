@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Family Tree Example</title>
+</head>
+<body>
+  <p id=text>The text you are reading is not actually the value of this &lt;p&gt; element</p>
+<script>
+  var text = document.getElementById('text');
+  console.log(text);
+  var valueOfElement = text.childNodes[0];
+  console.log(valueOfElement);
+  console.log(valueOfElement.nodeValue);
+  console.log(text.innerHTML);
+</script>
+</body>
+</html>
