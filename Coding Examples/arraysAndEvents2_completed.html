@@ -4,7 +4,7 @@
 </head>
 <body>
   <h1 id="title">Event Listeners</h1>
-  <h3 onClick="alert('I\'ve been clicked!')">Challenges</h3>
+  <h3 id="challenges">Challenges</h3>
   <p>You can write your answers to these challenges on a separate text document.</p>
   <ol>
     <li>Use the traditional event listener to create an alert when the word
@@ -13,7 +13,16 @@
       the text changes.</li>
   </ol>
 <script>
+  challenges = document.getElementById('challenges');
+  challenges.onclick = alert('I\'ve been clicked!');
 
+  title = document.getElementById('title');
+
+  var changeColor = function() {
+    title.style = "color:red;"
+  }
+
+  title.addEventListener('mouseover', changeColor, false);
 </script>
 </body>
 </html>
