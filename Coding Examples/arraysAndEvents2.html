@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1 id="title">Event Listeners</h1>
+  <h3 onClick="alert('I\'ve been clicked!')">Challenges</h3>
+  <p>You can write your answers to these challenges on a separate text document.</p>
+  <ol>
+    <li>Using only the console (not changing this HTML document in Atom),
+       change the title of the page to Turtles of the Deep.</li>
+     <li>Find out how to return the final element of the array seaTurtles.</li>
+     <li>Find out how to add Flatback to the end of the array seaTurtles.</li>
+  </ol>
+
+<script>
+var possibleTitles = ["Endangered Sea Turtles", "Turtles of the Deep",
+ "Teenage Mutant Ninja Sea Turtles"];
+var seaTurtles = ["Leatherback", "Green Turtle", "Hawksbill", "Loggerhead",
+"Olive Ridley", "Kemp's Ridley", "Flatback"];
+
+var switchTitle = function(index) {
+  title = document.getElementById('title');
+  title.innerHTML = possibleTitles[index];
+}
+
+</script>
+</body>
+</html>
