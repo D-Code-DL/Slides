@@ -34,6 +34,7 @@
 	<![endif]-->
 </head>
 
+
 <body>
 
 	<div class="reveal">
@@ -78,261 +79,289 @@
 				<section>
 					<p>An event handler is a structure in HTML or JavaScript that allows
 						an element to respond to user interaction with an HTML element.</p>
+				</section>
+				<section>
+					<p> How does the inline (first) style of event registration work?</p>
+				</section>
+				<section>
+					<p>The response is written in as a value of a property on an HTML
+						element.</p>
+				</section>
+				<section data-markdown>
+```
+&lt;h3 onclick="alert('I\'ve been clicked!')"&gt;Challenges&lt;/h3&gt;
+&lt;a href="www.facebook.com" onclick="doSomething()"&gt;Link to FB&lt;/a&gt;
+```
+				</section>
+				<section>
+					<p> How does the traditional (second) style of event registration work? </p>
+				</section>
+				<section>
+					<p>The response is written in JavaScript and it references the HTML
+						element.</p>
+				</section>
+				<section data-markdown>
+```
+HTML: &lt;h3 id="challenges"&gt;Challenges&lt;/h3&gt;
+JS: var challenges = document.getElementById('challenges');
+challenges.onclick = doSomething;
+```
+				</section>
+				<section>
+					<p> How does the W3C (third) style of event registration work? What
+						is an important difference between W3C style and traditional style? </p>
+				</section>
+				<section>
+				<p>The response is written in JavaScript and it references the HTML
+				element. It has a different syntax from the second method, and it
+				allows the user to determine which element the browser responds to first:
+				the parent (event capturing) or the child (event bubbling).</p>
+				</section>
+				<section data-markdown>
+				```
+				HTML: &lt;h3 id="challenges"&gt;Challenges&lt;/h3&gt;
+				JS: var challenges = document.getElementById('challenges');
+				challenges.addEventListener('click', doSomething, false);
+				```
+				</section>
+				<section>
+				<p> What is an array? </p>
+				</section>
+				<section>
+				<p>An array is an object that stores many values in a single variable.</p>
+				</section>
+				<section>
+				<p> What kinds of objects can arrays hold? </p>
+				</section>
+				<section>
+				<p>Arrays can hold booleans, numbers, strings, and other objects.
+				(Really, these are all objects.)</p>
+				</section>
+				<section>
+				<p> Could this be an array? </p>
+				<p> ["ten", 9, 8, "7", 6] </p>
+				</section>
+				<section>
+				<p> Yes, because JavaScript arrays can hold different data types (all are objects).</p>
+				</section>
+				<section>
+				<p> How would you get a reference to "7"? </p>
+				<p> var numbers = ["ten", 9, 8, "7", 6] </p>
+				</section>
+				<section>
+				<p> numbers[3] </p>
+				</section>
+			</section>
+
+			<section>
+			<h2>Tutorial Webpage Project (Project #2)</h2>
+			<p>Let's review the paper we are handing out.</p>
+			</section>
+
+			<section>
+			<p>The purpose of this website project is to pull together your own
+				knowledge and share it with others. You will create a tutorial for
+				users about how to do something you now know how to do in
+				JavaScript.</p>
+			</section>
+
+			<section>
+				<p>It doesn't have to be something you learned directly from the
+					slides; in fact, you can research a new topic.</p>
+					<p>A successful completed project will have the following features:</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>a two-paragraph explanation that describes why you chose the
+							topic you chose, what it can be useful for, and any other
+							information that you want to share with the user.</li>
+						<li>A step-by-step guide for implementing the thing that you are
+								describing. This guide should include at least one code snippet
+								to illustrate the topic. (You may add more if you want to show
+								additional examples, or real use cases you have found.)</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul>
+						<li>a quiz for users at the end, to answer at at least six questions
+							about the information on your site</li>
+							<li>that requests the user's name</li>
+							<li>and includes one short text answer</li>
+							<li>that is scored</li>
+							<li>and provides the correct answers to the user</li>
+							<li>works cited (a list of your sources)</li>
+						</ul>
+				</section>
+
+				<section>
+					<p>This project should be completed in pairs or on your own. If you
+						work in a pair, the requirements are doubled (four-paragraph
+						explanation, six code snippets, a twelve-question quiz).</p>
+				</section>
+
+				<section>
+					<h1>Teamwork Makes the Dream Work</h1>
+					<p>We’ve said this before and we’ll say it every time, “great software is created by great teams” -a bunch of smart people. We’ve also talked about the different roles on software teams: developers, quality assurance, designers, and project managers.</p>
+				</section>
+
+				<section>
+					<h1>Building Great Teams</h1>
+					<p>There’s science and studies about how to build a strong effective team. We’re just going to parse out some very important points:</p>
+					<ul>
+						<li>Teams should create norms/agreements on how they will work together</li>
+						<li>Teams should have a common defined goal they all work towards</li>
+						<li>Teams should play to each other’s strengths and weaknesses</li>
+						<li>Teams should maintain honest and open communication</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Keep In Mind</h1>
+					<p>Before starting work, try to come up with some norms and define the goal. Communicate with one another about each other’s vision for the final product to ensure everyone’s on the same page. Remember that every member is valuable and necessary to the project.</p>
+				</section>
+
+				<section>
+					<h1>Feedback Loops</h1>
+					<p>In order for a team to work well together, teammates have to be open and honest with one another. This is especially important on software teams where there are many parts that have to move together effectively to produce a product. This is where the value of good feedback comes in.</p>
 					</section>
+
 					<section>
-						<p> How does the inline (first) style of event registration work?</p>
+						<h1>Giving Constructive Feedback</h1>
+						<p>When giving feedback, feedback should be:</p>
+						<ul>
+							<li>actionable: A behavior that can be improved upon</li>
+							<li>specific: Feedback should be clearly defined</li>
+							<li>timely: Give feedback in the moment</li>
+						</ul>
+						<p>Remember you’re giving feedback because you want to help, not harm.</p>
 					</section>
+
 					<section>
-						<p>The response is written in as a value of a property on an HTML
-							element.</p>
+						<h1>Receiving Constructive Feedback</h1>
+						<p>When receiving feedback, you should be:</p>
+						<ul>
+							<li>receptive: Receive the feedback with an open mind </li>
+							<li>reflective: Reflect on what you’re being told and be open to the possibility that they’re right</li>
+							<li>inquisitive: Ask clarifying questions</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Keep In Mind</h1>
+						<p>While working on this project, remember the value of feedback. If a teammate’s actions are nudging the project off course, give them that feedback. If you’re receiving feedback from your teammates, remember it’s because they value you and the project. </p>
+					</section>
+
+					<section>
+						<h1>Plan Ahead</h1>
+						<p>Planning is one of the most important aspects of a successful project. Good planning can make a challenging project easier. Poor planning can make an easy project complicated. Proper project planning has multiple components such as, scope management, user story creation, estimating, project scheduling and resource management. Then after a plan is created it needs to be reviewed and revised throughout the project.
+							How do you plan a software project?</p>
+					</section>
+
+					<section>
+						<h1>Project Planning Overview</h1>
+						<p>We aren’t going to take you through all the steps of project planning, only what we believe will be most vital to the success of this product (we’ll send out additional slides that covers the parts we’re skipping). Let’s start with something we’ve reviewed before: User Story Creation</p>
+					</section>
+
+					<section>
+						<h1>Users Make the Product Go Round</h1>
+						<p>Think about the product from the point of view of the user. This is important not just in development but also in design. Where should the button go? Well, where would the user expect it? Should we add a subheader? Well, would the user expect a subheader? Would a subheader help the user understand the information presented?</p>
+					</section>
+
+					<section>
+						<h1>Break It Down</h1>
+						<p>Now that you have your assignment. We want you to break down the project into smaller parts based on the user’s perspective.
+								Ex: As a student user I want to read information about this javascript thing in paragraph form so that I can understand how it works.</p>
+					</section>
+
+					<section>
+						<h1>Break It Down Again</h1>
+						<p>After you’ve written your user stories, I want you to break them down into smaller tasks. The tasks should build up into the completed user story. Each task should be something one person/pair can work on.
+							Ex:</p>
+							<ol>
+								<li>Research a javascript topic</li>
+								<li>Outline the steps for the guide</li>
+								<li>Draft a code snippet using the variables</li>
+							</ol>
 						</section>
+
 						<section>
-							<p> How does the traditional (second) style of event registration work? </p>
+							<h1>Get Into the Flow</h1>
+							<p>Development is a process. Planning, design, development, testing, repeat. For this project we want you to use this development cycle. Once you’ve planned your project and before writing any code, take a moment to think about and draft the design. Now you can start writing code to complete the tasks. After each user story, test it out to ensure the user is getting the planned experience. Repeat.</p>
 						</section>
+
 						<section>
-							<p>The response is written in JavaScript and it references the HTML
-								element.</p>
-							</section>
-							<section>
-								<p> How does the W3C (third) style of event registration work? What
-									is an important difference between W3C style and traditional style? </p>
-								</section>
-								<section>
-									<p>The response is written in JavaScript and it references the HTML
-										element. It has a different syntax from the second method, and it
-										allows the user to determine which element the browser responds to first:
-										the parent (event capturing) or the child (event bubbling).</p>
-									</section>
-									<section>
-										<p> What is an array? </p>
-									</section>
-									<section>
-										<p>An array is an object that stores many values in a single variable.</p>
-									</section>
-									<section>
-										<p> What kinds of objects can arrays hold? </p>
-									</section>
-									<section>
-										<p>Arrays can hold booleans, numbers, strings, and other objects.
-											(Really, these are all objects.)</p>
-										</section>
-										<section>
-											<p> Could this be an array? </p>
-											<p> ["ten", 9, 8, "7", 6] </p>
-										</section>
-										<section>
-											<p> Yes, because JavaScript arrays can hold different data types (all are objects).</p>
-										</section>
-										<section>
-											<p> How would you get a reference to "7"? </p>
-											<p> var numbers = ["ten", 9, 8, "7", 6] </p>
-										</section>
-										<section>
-											<p> numbers[3] </p>
-										</section>
-									</section>
+							<h2>This project is due at the end of class on Monday, May 16.</h2>
+						</section>
 
-									<section>
-										<h2>Tutorial Webpage Project (Project #2)</h2>
-										<p>Let's review the paper we are handing out.</p>
-									</section>
+						<section>
+							<h2>Goals</h2>
+							<ul class="checklist">
+								<li>
+									<input type="checkbox" id="goal1" checked />
+									<label for="goal1">Project Explanation</label>
+								</li>
+								<li>
+									<input type="checkbox" id="goal2" />
+									<label for="goal2">Work Time</label>
+								</li>
+							</ul>
+						</section>
 
-									<section>
-										<p>The purpose of this website project is to pull together your own
-											knowledge and share it with others. You will create a tutorial for
-											users about how to do something you now know how to do in
-											JavaScript.</p>
-										</section>
+						<section>
+							<h2>Work time</h2>
+						</section>
 
-										<section>
-											<p>It doesn't have to be something you learned directly from the
-												slides; in fact, you can research a new topic.</p>
-												<p>A successful completed project will have the following features:</p>
-											</section>
-
-											<section>
-												<ul>
-													<li>a two-paragraph explanation that describes why you chose the
-														topic you chose, what it can be useful for, and any other
-														information that you want to share with the user.</li>
-														<li>A step-by-step guide for implementing the thing that you are
-															describing. This guide should include at least one code snippet
-															to illustrate the topic. (You may add more if you want to show
-															additional examples, or real use cases you have found.)</li>
-															<li>a quiz for users at the end, to answer at at least six questions
-																about the information on your site</li>
-																<li>that requests the user's name</li>
-																<li>and includes one short text answer</li>
-																<li>that is scored</li>
-																<li>and provides the correct answers to the user</li>
-																<li>works cited (a list of your sources)</li></ul>
-															</section>
-
-															<section>
-																<p>This project should be completed in pairs or on your own. If you
-																	work in a pair, the requirements are doubled (four-paragraph
-																	explanation, six code snippets, a twelve-question quiz).</p>
-																</section>
-
-																<section>
-																	<h1>Teamwork Makes the Dream Work</h1>
-																	<p>We’ve said this before and we’ll say it every time, “great software is created by great teams” -a bunch of smart people. We’ve also talked about the different roles on software teams: developers, quality assurance, designers, and project managers.</p>
-																</section>
-
-																<section>
-																	<h1>Building Great Teams</h1>
-																	<p>There’s science and studies about how to build a strong effective team. We’re just going to parse out some very important points:</p>
-																	<ul>
-																		<li>Teams should create norms/agreements on how they will work together</li>
-																		<li>Teams should have a common defined goal they all work towards</li>
-																		<li>Teams should play to each other’s strengths and weaknesses</li>
-																		<li>Teams should maintain honest and open communication</li>
-																	</ul>
-																</section>
-
-																<section>
-																	<h1>Keep In Mind</h1>
-																	<p>Before starting work, try to come up with some norms and define the goal. Communicate with one another about each other’s vision for the final product to ensure everyone’s on the same page. Remember that every member is valuable and necessary to the project.</p>
-																</section>
-
-																<section>
-																	<h1>Feedback Loops</h1>
-																	<p>In order for a team to work well together, teammates have to be open and honest with one another. This is especially important on software teams where there are many parts that have to move together effectively to produce a product. This is where the value of good feedback comes in.</P>
-																	</section>
-
-																	<section>
-																		<h1>Giving Constructive Feedback</h1>
-																		<p>When giving feedback, feedback should be:</p>
-																		<ul>
-																			<li>actionable: A behavior that can be improved upon</li>
-																			<li>specific: Feedback should be clearly defined</li>
-																			<li>timely: Give feedback in the moment</li>
-																		</ul>
-																		<p>Remember you’re giving feedback because you want to help, not harm.</p>
-																	</section>
-
-																	<section>
-																		<h1>Receiving Constructive Feedback</h1>
-																		<p>When receiving feedback, you should be:</p>
-																		<ul>
-																			<li>receptive: Receive the feedback with an open mind </li>
-																			<li>reflective: Reflect on what you’re being told and be open to the possibility that they’re right</li>
-																			<li>inquisitive: Ask clarifying questions</li>
-																		</ul>
-																	</section>
-
-																	<section>
-																		<h1>Keep In Mind</h1>
-																		<p>While working on this project, remember the value of feedback. If a teammate’s actions are nudging the project off course, give them that feedback. If you’re receiving feedback from your teammates, remember it’s because they value you and the project. </p>
-																	</section>
-
-																	<section>
-																		<h1>Plan Ahead</h1>
-																		<p>Planning is one of the most important aspects of a successful project. Good planning can make a challenging project easier. Poor planning can make an easy project complicated. Proper project planning has multiple components such as, scope management, user story creation, estimating, project scheduling and resource management. Then after a plan is created it needs to be reviewed and revised throughout the project.
-																			How do you plan a software project?</p>
-
-																			<section>
-																				<h1>Project Planning Overview</h1>
-																				<p>We aren’t going to take you through all the steps of project planning, only what we believe will be most vital to the success of this product (we’ll send out additional slides that covers the parts we’re skipping). Let’s start with something we’ve reviewed before: User Story Creation</p>
-																			</section>
-
-																			<section>
-																				<h1>Users Make the Product Go Round</h1>
-																				<p>Think about the product from the point of view of the user. This is important not just in development but also in design. Where should the button go? Well, where would the user expect it? Should we add a subheader? Well, would the user expect a subheader? Would a subheader help the user understand the information presented?</p>
-																			</section>
-
-																			<section>
-																				<h1>Break It Down<h1>
-																					<p>Now that you have your assignment. We want you to break down the project into smaller parts based on the user’s perspective.
-																						Ex: As a student user I want to read information about this javascript thing in paragraph form so that I can understand how it works.</p>
-
-																						<section>
-																							<h1>Break It Down Again</h1>
-																							<p>After you’ve written your user stories, I want you to break them down into smaller tasks. The tasks should build up into the completed user story. Each task should be something one person/pair can work on.
-																								Ex:</p>
-																								<ol>
-																									<li>Research a javascript topic</li>
-																									<li>Outline the steps for the guide</li>
-																									<li>Draft a code snippet using the variables</li>
-																								</ol>
-																							</section>
-
-																							<section>
-																								<h1>Get Into the Flow</h1>
-																								<p>Development is a process. Planning, design, development, testing, repeat. For this project we want you to use this development cycle. Once you’ve planned your project and before writing any code, take a moment to think about and draft the design. Now you can start writing code to complete the tasks. After each user story, test it out to ensure the user is getting the planned experience. Repeat.</p>
-																							</section>
-
-																							<section>
-																								<h2>This project is due at the end of class on Monday, May 16.</h2>
-																							</section>
-
-																							<section>
-																								<h2>Goals</h2>
-																								<ul class="checklist">
-																									<li>
-																										<input type="checkbox" id="goal1" checked />
-																										<label for="goal1">Project Explanation</label>
-																									</li>
-																									<li>
-																										<input type="checkbox" id="goal2" />
-																										<label for="goal2">Work Time</label>
-																									</li>
-																								</ul>
-																							</section>
-
-																							<section>
-																								<h2>Work time</h2>
-																							</section>
-
-																							<section>
-																								<h2>And Now We're Done</h2>
-																								<ul class="checklist">
-																									<li>
-																										<input type="checkbox" id="goal1" checked />
-																										<label for="goal1">Project Explanation</label>
-																									</li>
-																									<li>
-																										<input type="checkbox" id="goal2" checked/>
-																										<label for="goal2">Work Time</label>
-																									</li>
-																								</ul>
-																								<p text-align="right">At least...by our definition of done.</p>
-																							</section>
+						<section>
+							<h2>And Now We're Done</h2>
+							<ul class="checklist">
+								<li>
+									<input type="checkbox" id="goal1" checked />
+									<label for="goal1">Project Explanation</label>
+								</li>
+								<li>
+									<input type="checkbox" id="goal2" checked/>
+									<label for="goal2">Work Time</label>
+								</li>
+							</ul>
+							<p text-align="right">At least...by our definition of done.</p>
+						</section>
 
 
-																						</div>
+		</div>
 
-																					</div>
+	</div>
 
-																					<script src="lib/js/head.min.js"></script>
-																					<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-																					<script>
+	<script>
 
-																					// Full list of configuration options available at:
-																					// https://github.com/hakimel/reveal.js#configuration
-																					Reveal.initialize({
-																						controls: true,
-																						progress: true,
-																						history: true,
-																						center: true,
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
 
-																						transition: 'slide', // none/fade/slide/convex/concave/zoom
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-																						// Optional reveal.js plugins
-																						dependencies: [
-																							{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-																							{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-																							{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-																							{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-																							{ src: 'plugin/zoom-js/zoom.js', async: true },
-																							{ src: 'plugin/notes/notes.js', async: true }
-																						]
-																					});
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true }
+		]
+	});
 
-																					Reveal.configure({ slideNumber: 'c/t' });
+	Reveal.configure({ slideNumber: 'c/t' });
 
-																					</script>
+	</script>
 
-																				</body>
-																				</html>
+</body>
+</html>
