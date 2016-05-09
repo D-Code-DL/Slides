@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Objects and Document Object Model</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Kyle Ofori and Brandy Foster">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Tutorial Webpage Project</h1>
+					<h2>(2016 May 09, 12, 16)</h2>
+					<h3>D-Code</h3>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1"  />
+							<label for="goal1">Project Explanation</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" />
+							<label for="goal2">Work Time</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<section data-markdown>
+						```javascript
+						try {
+							whatDoYouRemember();
+						}
+						```
+					</section>
+					<section>
+						<p> What is an event handler? (What does it do?)</p>
+					</section>
+					<section>
+						<p>An event handler is a structure in HTML or JavaScript that allows
+						an element to respond to user interaction with an HTML element.</p>
+					</section>
+					<section>
+						<p> How does the inline (first) style of event registration work?</p>
+					</section>
+					<section>
+						<p>The response is written in as a value of a property on an HTML
+						element.</p>
+					</section>
+					<section>
+						<p> How does the traditional (second) style of event registration work? </p>
+					</section>
+					<section>
+						<p>The response is written in JavaScript and it references the HTML
+						element.</p>
+					</section>
+					<section>
+						<p> How does the W3C (third) style of event registration work? What
+						is an important difference between W3C style and traditional style? </p>
+					</section>
+					<section>
+						<p>The response is written in JavaScript and it references the HTML
+						element. It has a different syntax from the second method, and it
+					allows the user to determine which element the browser responds to first:
+				the parent (event capturing) or the child (event bubbling).</p>
+					</section>
+					<section>
+						<p> What is an array? </p>
+					</section>
+					<section>
+						<p>An array is an object that stores many values in a single variable.</p>
+					</section>
+					<section>
+						<p> What kinds of objects can arrays hold? </p>
+					</section>
+					<section>
+						<p>Arrays can hold booleans, numbers, strings, and other objects.
+							(Really, these are all objects.)</p>
+					</section>
+					<section>
+						<p> Could this be an array? </p>
+						<p> ["ten", 9, 8, "7", 6] </p>
+					</section>
+					<section>
+						<p> Yes, because JavaScript arrays can hold different data types (all are objects).</p>
+					</section>
+					<section>
+						<p> How would you get a reference to "7"? </p>
+						<p> var numbers = ["ten", 9, 8, "7", 6] </p>
+					</section>
+					<section>
+						<p> numbers[3] </p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Tutorial Webpage Project (Project #2)</h2>
+					<p>Let's review the paper we are handing out.</p>
+				</section>
+
+				<section>
+					<p>The purpose of this website project is to pull together your own
+						 knowledge and share it with others. You will create a tutorial for
+						 users about how to do something you now know how to do in
+						  JavaScript.</p>
+				</section>
+
+				<section>
+					<p>It doesn't have to be something you learned directly from the
+						slides; in fact, you can research a new topic.</p>
+						<p>A successful completed project will have the following features:</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>a two-paragraph explanation that describes why you chose the
+							topic you chose, what it can be useful for, and any other
+							information that you want to share with the user.</li>
+						<li>A step-by-step guide for implementing the thing that you are
+							describing. This guide should include at least three code snippets
+							 to illustrate the topic. (You may add more if you want to show
+							  additional examples, or real use cases you have found.)</li>
+						<li>a quiz for users at the end, to answer at at least six questions
+							 about the information on your site</li>
+						<li>works cited (a list of your sources)</li></ul>
+				</section>
+
+				<section>
+					<p>This project should be completed in pairs or on your own. If you
+						 work in a pair, the requirements are doubled (four-paragraph
+						  explanation, six code snippets, a twelve-question quiz).</p>
+				</section>
+
+				<section>
+				<h2>This project is due at the end of class on Monday, May 16.</h2>
+				</section>
+
+				<section>
+					<h2>Goals</h2>
+					<ul class="checklist">
+						<li>
+							<input type="checkbox" id="goal1" checked />
+							<label for="goal1">Project Explanation</label>
+						</li>
+						<li>
+							<input type="checkbox" id="goal2" />
+							<label for="goal2">Work Time</label>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Work time</h2>
+				</section>
+
+			<section>
+				<h2>And Now We're Done</h2>
+				<ul class="checklist">
+					<li>
+						<input type="checkbox" id="goal1" checked />
+						<label for="goal1">Project Explanation</label>
+					</li>
+					<li>
+						<input type="checkbox" id="goal2" />
+						<label for="goal2">Work Time</label>
+					</li>
+				</ul>
+				<p text-align="right">At least...by our definition of done.</p>
+			</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+
+		</script>
+
+	</body>
+</html>
